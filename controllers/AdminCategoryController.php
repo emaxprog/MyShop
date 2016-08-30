@@ -31,7 +31,7 @@ class AdminCategoryController extends AdminBase
 
 
             if (!isset($name) || empty($name))
-                $errors[] = 'Имя не может быть пустым';
+                $errors[] = 'Введите название категории';
 
             if (!$errors) {
                 Category::createCategory($name, $sortOrder, $status, $parentId);
@@ -62,7 +62,7 @@ class AdminCategoryController extends AdminBase
             header("Location: /admin/category");
         }
 
-        require_once(ROOT . '/views/admin_category/update.php');
+        require_once(ROOT . '/views/admin_category/index.php');
         return true;
     }
 

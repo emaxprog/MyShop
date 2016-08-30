@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин</title>
-    <link rel="icon" type="image/x-icon" href="/template/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/upload/logotype/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/template/styles/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/template/styles/css/styles.css">
     <script rel="script" type="text/javascript" src="/template/js/jQuery/jquery-3.1.0.js"></script>
@@ -20,6 +20,7 @@
     <script rel="script" type="text/javascript" src="/template/js/menu-select.js"></script>
 </head>
 <body>
+<?php $contacts = Header::getContacts(); ?>
 <div class="wrapper-header">
     <?php if (!User::isGuest()): ?>
         <div class="header-user">
@@ -36,15 +37,15 @@
     <div class="mid">
         <header class="header">
             <div class="logotype">
-                <img src="/template/images/logotype.png" alt="Логотип" title="Логотип">
+                <img src="/upload/logotype/logotype.png" alt="Логотип" title="Логотип">
             </div>
             <div class="contacts">
                 <ul>
                     <li>
-                        <i class="fa fa-phone fa-lg"></i> 8(800)000-00-00
+                        <i class="fa fa-phone fa-lg"></i> <?php echo $contacts[0]['content'] ?>
                     </li>
                     <li>
-                        <i class="fa fa-phone fa-lg"></i> 8(863)52-0-00-00
+                        <i class="fa fa-phone fa-lg"></i> <?php echo $contacts[1]['content'] ?>
                     </li>
                 </ul>
             </div>

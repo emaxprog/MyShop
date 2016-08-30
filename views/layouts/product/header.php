@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин</title>
-    <link rel="icon" type="image/x-icon" href="/template/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/upload/logotype/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/template/styles/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/template/styles/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/template/styles/css/product/styles.css">
@@ -35,7 +35,7 @@
     <div class="mid">
         <header class="header">
             <div class="logotype">
-                <img src="/template/images/logotype.png" alt="Логотип" title="Логотип">
+                <img src="/upload/logotype/logotype.png" alt="Логотип" title="Логотип">
             </div>
             <div class="contacts">
                 <ul>

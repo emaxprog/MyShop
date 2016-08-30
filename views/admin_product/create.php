@@ -5,7 +5,7 @@
             <div class="admin-create">
                 <h2>Добавить новый товар</h2>
                 <?php if ($errors): ?>
-                    <ul>
+                    <ul class="errors">
                         <?php foreach ($errors as $error): ?>
                             <li> - <?php echo $error; ?></li>
                         <?php endforeach; ?>
@@ -39,8 +39,12 @@
                         </select>
                         <br>
                         <?php for ($i = 0; $i < 5; $i++): ?>
-                            <label>Изображение товара №<?= $i + 1; ?></label><br>
-                            <input type="file" name="image[]" placeholder=""><br>
+                            <label>Изображение товара №<?= $i + 1; ?><?php if($i==0) echo '(Основное изображение)'?> </label><br>
+                            <input type="file" name="image[]" placeholder=""><input name="delete-img-<?= $i ?>"
+                                                                                    id="delete-img-<?= $i ?>"
+                                                                                    value="<?= null ?>" type="checkbox">
+                            <label for="delete-img-<?= $i ?>">Удалить</label><br>
+                            <br>
                         <?php endfor; ?>
 
                         <label>Детальное описание</label><br>

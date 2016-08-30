@@ -94,4 +94,8 @@
   }
 }
 
-
+.errors{
+  @extend %ul-clear;
+  color: #ff0000;
+  margin: 5px 20px;
+}

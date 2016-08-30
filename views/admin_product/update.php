@@ -5,7 +5,7 @@
                 <div class="admin-update">
                     <h2>Редактировать товар #<?php echo $id; ?></h2>
                     <?php if ($errors): ?>
-                        <ul>
+                        <ul class="errors">
                             <?php foreach ($errors as $error): ?>
                                 <li> - <?php echo $error; ?></li>
                             <?php endforeach; ?>
@@ -30,7 +30,7 @@
                             <select name="category_id">
                                 <?php foreach ($subcategories as $subcategory): ?>
                                     <option value="<?php echo $subcategory['id']; ?>"
-                                        <?php if ($product['subcategory_id'] == $subcategory['id']) echo ' selected="selected"'; ?>>
+                                        <?php if ($product['category_id'] == $subcategory['id']) echo ' selected="selected"'; ?>>
                                         <?php echo $subcategory['name']; ?>
                                     </option>
                                 <?php endforeach; ?>
@@ -41,9 +41,9 @@
                             <input type="text" name="brand" placeholder="" value="<?php echo $product['brand']; ?>"><br>
 
                             <?php for ($i = 0; $i < 5; $i++): ?>
-                                <label>Изображение товара №<?= $i + 1; ?></label><br>
-                                <img id="img-<?=$i?>" src="<?= Product::getImage($imagesPaths[$i]); ?>" width="200" alt=""/><br>
-                                <input type="file" name="image[]" placeholder=""><button id="delete-img-<?=$i?>">Удалить</button><br>
+                                <label>Изображение товара №<?= $i + 1; ?><?php if($i==0) echo '(Основное изображение)'?></label><br>
+                                <img src="<?= Product::getImage($imagesPaths[$i]); ?>" width="200" alt=""/><br>
+                                <input type="file" name="image[]" placeholder=""><input name="delete-img-<?=$i?>" id="delete-img-<?=$i?>" value="<?=null?>" type="checkbox"><label for="delete-img-<?=$i?>">Удалить</label><br>
                             <?php endfor; ?>
                             <br>
 

@@ -5,7 +5,7 @@
                 <div class="admin-create admin-create-category">
                     <h2>Добавить новую категорию</h2>
                     <?php if ($errors): ?>
-                        <ul>
+                        <ul class="errors">
                             <?php foreach ($errors as $error): ?>
                                 <li> - <?php echo $error; ?></li>
                             <?php endforeach; ?>

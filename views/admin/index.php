@@ -10,6 +10,7 @@
                         <li><a href="/admin/category"><i class="fa fa-gamepad fa-lg"></i> Управление категориями</a></li>
                         <li><a href="/admin/order"><i class="fa fa-gamepad fa-lg"></i> Управление заказами</a></li>
                         <li><a href="/admin/afisha"><i class="fa fa-gamepad fa-lg"></i> Управление афишей</a></li>
+                        <li><a href="/admin/header"><i class="fa fa-gamepad fa-lg"></i> Управление шапкой</a></li>
                     </ul>
                 </div>
             </div>

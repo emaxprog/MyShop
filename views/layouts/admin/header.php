@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин</title>
-    <link rel="icon" type="image/x-icon" href="/template/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/upload/logotype/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/template/styles/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/template/styles/css/styles.css">
     <script rel="script" type="text/javascript" src="/template/js/jQuery/jquery-3.1.0.js"></script>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .errors, .cabinet-menu {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -29,7 +29,7 @@ div.mid {
   margin: 0 auto; }
 
 /*Шапка сайта*/
-.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .errors, .cabinet-menu {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -67,6 +67,9 @@ div.mid {
   align-items: center;
   flex-flow: row wrap;
   justify-content: space-between; }
+  .header .logotype img {
+    max-width: 300px;
+    max-height: 150px; }
 
 .contacts > ul {
   display: flex; }
@@ -91,7 +94,7 @@ div.mid {
         color: #00a2e8; }
 
 /*Меню сайта*/
-.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .errors, .cabinet-menu {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -136,7 +139,7 @@ div.mid {
   width: 100%; }
 
 /*popup*/
-.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .errors, .cabinet-menu {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -303,7 +306,7 @@ div.mid {
     flex-basis: 940px; }
 
 /*Меню товаров*/
-.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .errors, .cabinet-menu {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -432,7 +435,7 @@ div.mid {
   color: #ffffff; }
 
 /*Центр*/
-.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .errors, .cabinet-menu {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -547,7 +550,7 @@ ul.pagination {
       background: #303030; }
 
 /*Футер*/
-.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .errors, .cabinet-menu {
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -705,6 +708,10 @@ ul.pagination {
   font-size: 18px; }
   .admin-delete input[type=submit]:hover, .admin-delete .btn-back:hover, .admin-view input[type=submit]:hover, .admin-view .btn-back:hover {
     background: #303030; }
+
+.errors {
+  color: #ff0000;
+  margin: 5px 20px; }
 
 .cabinet-menu {
   margin: 20px 0; }

@@ -2,6 +2,7 @@
 
 return array(
 
+    'admin/header'=>'adminHeader/index',
     'admin/afisha'=>'adminAfisha/index',
     // Управление товарами:
     'admin/product/create' => 'adminProduct/create',

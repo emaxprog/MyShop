@@ -4,7 +4,7 @@ class SiteController
 {
     public function actionIndex()
     {
-        $images=Afisha::getAfisha();
+        $images=Header::getAfisha();
         $categories = Category::getCategories();
         $latestProducts = Product::getProducts();
         $recommendedProducts = Product::getProducts(true, 3);

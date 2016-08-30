@@ -40,7 +40,7 @@ class AdminProductController extends AdminBase
 
             $images = array();
 
-            for ($i = 0; isset($_FILES['image']['tmp_name'][$i]); $i++) {
+            for ($i = 0; $i < 5; $i++) {
                 if (is_uploaded_file($_FILES['image']['tmp_name'][$i])) {
                     if (move_uploaded_file($_FILES['image']['tmp_name'][$i], $_SERVER['DOCUMENT_ROOT'] . '/upload/products/' . $_FILES['image']['name'][$i]))
                         $images[$i] = '/upload/products/' . $_FILES['image']['name'][$i];
@@ -48,6 +48,8 @@ class AdminProductController extends AdminBase
                         $errors[] = 'Ошибка при загрузке файла' . $i + 1;
                 } else {
                     $images[$i] = null;
+                    if (isset($_POST['delete-img-' . $i]))
+                        $images[$i] = null;
                 }
             }
             $options['image_path'] = json_encode($images);
@@ -75,6 +77,7 @@ class AdminProductController extends AdminBase
 
         $categories = Category::getCategoriesAll();
 
+        $subcategories = Category::getSubcategoriesAll();
         $errors = false;
 
         if (isset($_POST['submit'])) {
@@ -92,7 +95,7 @@ class AdminProductController extends AdminBase
 
             $images = array();
 
-            for ($i = 0; isset($_FILES['image']['tmp_name'][$i]); $i++) {
+            for ($i = 0; $i < 5; $i++) {
                 if (is_uploaded_file($_FILES['image']['tmp_name'][$i])) {
                     if (move_uploaded_file($_FILES['image']['tmp_name'][$i], $_SERVER['DOCUMENT_ROOT'] . '/upload/products/' . $_FILES['image']['name'][$i]))
                         $images[$i] = '/upload/products/' . $_FILES['image']['name'][$i];
@@ -100,8 +103,13 @@ class AdminProductController extends AdminBase
                         $errors[] = 'Ошибка при загрузке файла' . $i + 1;
                 } else {
                     $images[$i] = $imagesPaths[$i];
+                    if (isset($_POST['delete-img-' . $i])) {
+                        $images[$i] = null;
+                        unlink($_SERVER['DOCUMENT_ROOT'] . $imagesPaths[$i]);
+                    }
                 }
             }
+
             $options['image_path'] = json_encode($images);
 
             if (!isset($options['name']) || empty($options['name']))
@@ -111,7 +119,7 @@ class AdminProductController extends AdminBase
                 header('Location:/admin/product');
             }
         }
-        require_once(ROOT . '/views/admin_product/update.php');
+        require_once(ROOT . '/views/admin_product/index.php');
         return true;
     }
 
@@ -127,8 +135,4 @@ class AdminProductController extends AdminBase
         return true;
     }
 
-    public function actionDeleteImg($id)
-    {
-
-    }
 }

@@ -15,8 +15,11 @@
                         <form action="#" method="post" enctype="multipart/form-data">
                             <?php for($i=0;$i<5;$i++):?>
                                 <label>Баннер №<?=$i+1;?></label><br>
-                                <img src="<?=Afisha::getImage($images[$i]);?>" width="200" alt=""/><br>
-                                <input type="file" name="image[]" placeholder=""><br>
+                                <img src="<?=Header::getImage($images[$i]);?>" width="200" alt=""/><br>
+                                <input type="file" name="image[]" placeholder=""><input name="delete-img-<?= $i ?>"
+                                                                                        id="delete-img-<?= $i ?>"
+                                                                                        value="<?= null ?>" type="checkbox">
+                                <label for="delete-img-<?= $i ?>">Удалить</label><br><br>
                             <?php endfor;?>
                             <br>
                             <input type="submit" name="submit" class="btn btn-default" value="Сохранить"><br>
