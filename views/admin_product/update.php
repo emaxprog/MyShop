@@ -42,8 +42,8 @@
 
                             <?php for ($i = 0; $i < 5; $i++): ?>
                                 <label>Изображение товара №<?= $i + 1; ?></label><br>
-                                <img src="<?= Product::getImage($imagesPaths[$i]); ?>" width="200" alt=""/><br>
-                                <input type="file" name="image[]" placeholder=""><br>
+                                <img id="img-<?=$i?>" src="<?= Product::getImage($imagesPaths[$i]); ?>" width="200" alt=""/><br>
+                                <input type="file" name="image[]" placeholder=""><button id="delete-img-<?=$i?>">Удалить</button><br>
                             <?php endfor; ?>
                             <br>
 

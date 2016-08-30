@@ -8,7 +8,7 @@
                     <a href="/admin/category/create" class="btn-add-category"><i class="fa fa-plus"></i> Добавить
                         категорию</a>
 
-                    <table class="table-bordered table-striped table">
+                    <table class="table-categories">
                         <tr>
                             <th>ID категории</th>
                             <th>Название категории</th>
@@ -26,9 +26,9 @@
                                 <td><?php echo $category['sort_order']; ?></td>
                                 <td><?php echo Category::getStatusText($category['status']); ?></td>
                                 <td><a href="/admin/category/update/<?php echo $category['id']; ?>"
-                                       title="Редактировать"><i class="fa fa-pencil-square-o"></i></a></td>
+                                       title="Редактировать"><i class="fa fa-edit fa-lg"></i></a></td>
                                 <td><a href="/admin/category/delete/<?php echo $category['id']; ?>" title="Удалить"><i
-                                            class="fa fa-times"></i></a></td>
+                                            class="fa fa-trash-o fa-lg"></i></a></td>
                             </tr>
                         <?php endforeach; ?>
                     </table>

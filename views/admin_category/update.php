@@ -9,10 +9,10 @@
                     <div class="login-form">
                         <form action="#" method="post">
 
-                            <label>Название</label>
-                            <input type="text" name="name" placeholder="" value="<?php echo $category['name']; ?>">
+                            <label>Название</label><br>
+                            <input type="text" name="name" placeholder="" value="<?php echo $category['name']; ?>"><br>
 
-                            <label>Главная категория</label>
+                            <label>Главная категория</label><br>
                             <select name="parent_id">
                                 <option value="0">Главная категория</option>
                                 <?php if (isset($parentCategories)): ?>
@@ -23,12 +23,12 @@
                                     <?php endforeach; ?>
                                 <?php endif; ?>
                             </select>
-
-                            <label>Порядковый номер</label>
+                            <br>
+                            <label>Порядковый номер</label><br>
                             <input type="text" name="sort_order" placeholder=""
-                                   value="<?php echo $category['sort_order']; ?>">
+                                   value="<?php echo $category['sort_order']; ?>"><br>
 
-                            <label>Статус</label>
+                            <label>Статус</label><br>
                             <select name="status">
                                 <option
                                     value="1" <?php if ($category['status'] == 1) echo ' selected="selected"'; ?>>
@@ -40,9 +40,9 @@
                                 </option>
                             </select>
 
-                            <br><br>
+                            <br>
 
-                            <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
+                            <input type="submit" name="submit" class="btn btn-default" value="Сохранить"><br>
                         </form>
                     </div>
                 </div>

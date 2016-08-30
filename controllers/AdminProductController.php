@@ -127,4 +127,8 @@ class AdminProductController extends AdminBase
         return true;
     }
 
+    public function actionDeleteImg($id)
+    {
+
+    }
 }

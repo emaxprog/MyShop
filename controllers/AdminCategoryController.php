@@ -21,15 +21,14 @@ class AdminCategoryController extends AdminBase
     public function actionCreate()
     {
         self::checkAdmin();
-        $parentCategories=Category::getParentCategories();
-
+        $parentCategories = Category::getParentCategories();
+        $errors = false;
         if (isset($_POST['submit'])) {
             $name = $_POST['name'];
             $sortOrder = $_POST['sort_order'];
             $status = $_POST['status'];
             $parentId = $_POST['parent_id'];
 
-            $errors = false;
 
             if (!isset($name) || empty($name))
                 $errors[] = 'Имя не может быть пустым';
@@ -51,14 +50,14 @@ class AdminCategoryController extends AdminBase
 
         $category = Category::getCategoryById($id);
 
-        $parentCategories=Category::getParentCategories();
+        $parentCategories = Category::getParentCategories();
         if (isset($_POST['submit'])) {
             $name = $_POST['name'];
             $sortOrder = $_POST['sort_order'];
             $status = $_POST['status'];
-            $parentId=$_POST['parent_id'];
+            $parentId = $_POST['parent_id'];
 
-            Category::updateCategoryById($id, $name, $sortOrder, $status,$parentId);
+            Category::updateCategoryById($id, $name, $sortOrder, $status, $parentId);
 
             header("Location: /admin/category");
         }
