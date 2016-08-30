@@ -1,0 +1,32 @@
+@charset "UTF-8";
+.wrapper-menu .menu > ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.wrapper-menu {
+  background: #00a2e8; }
+  .wrapper-menu .menu > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .wrapper-menu .menu > ul li {
+      white-space: nowrap; }
+      .wrapper-menu .menu > ul li a {
+        display: block;
+        padding: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px; }
+        .wrapper-menu .menu > ul li a:hover {
+          background: #303030; }
+
+/*фиксированное меню*/
+#fixed-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%; }
+
+/*# sourceMappingURL=menu.css.map */

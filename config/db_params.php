@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'host'=>'testsite',
+    'host'=>'localhost',
     'dbname'=>'mysite',
     'user'=>'root',
     'password'=>'ghjuhfvvbcn96'

@@ -1,0 +1,31 @@
+@import "../templates";
+.wrapper-menu {
+  background: $AQUA_COLOR;
+  .menu > ul {
+    @extend %ul-clear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      white-space: nowrap;
+      a {
+        display: block;
+        padding: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        &:hover {
+          background: $DARK_GREY_COLOR;
+        }
+      }
+    }
+  }
+}
+
+/*фиксированное меню*/
+#fixed-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+}

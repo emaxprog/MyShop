@@ -1,0 +1,115 @@
+.menu-products ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.menu-products {
+  margin: 20px 0; }
+  .menu-products ul li {
+    position: relative; }
+    .menu-products ul li:hover .sub-menu {
+      display: block; }
+    .menu-products ul li a {
+      text-decoration: none;
+      display: block;
+      border: 1px solid #00a2e8;
+      padding: 20px;
+      color: #303030;
+      margin-bottom: -1px; }
+      .menu-products ul li a:hover {
+        background: #303030;
+        color: #ffffff; }
+    .menu-products ul li .sub-menu {
+      position: absolute;
+      display: none;
+      left: 238px;
+      z-index: 10;
+      background: #ffffff;
+      top: 0;
+      border-left: 2px solid #00a2e8; }
+      .menu-products ul li .sub-menu a {
+        width: 210px; }
+
+.menu-select {
+  margin: 20px 0;
+  border: 1px solid #00a2e8; }
+  .menu-select #form-selection {
+    display: flex;
+    flex-direction: column; }
+  .menu-select .range-price {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 20px; }
+    .menu-select .range-price .price-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0; }
+      .menu-select .range-price .price-input input[type=text] {
+        width: 80px;
+        height: 30px;
+        font-size: 18px; }
+  .menu-select .brand {
+    border-top: 1px solid #00a2e8;
+    padding: 20px; }
+    .menu-select .brand .brand-list {
+      padding: 5px;
+      font-size: 18px;
+      display: flex;
+      flex-flow: column nowrap;
+      height: 200px;
+      overflow: auto;
+      margin: 10px 0;
+      border: 1px solid #00a2e8; }
+      .menu-select .brand .brand-list .brand-row {
+        margin: 5px 0; }
+  .menu-select #btn-selection {
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background: #00a2e8;
+    color: #FFFFFF;
+    margin: 0 20px 20px 20px; }
+  .menu-select .checkbox + label {
+    cursor: pointer; }
+  .menu-select .checkbox:not(checked) {
+    position: absolute;
+    opacity: 0; }
+  .menu-select .checkbox:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 60px; }
+  .menu-select .checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2); }
+  .menu-select .checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all .2s; }
+  .menu-select .checkbox:checked + label:before {
+    background: #00a2e8; }
+  .menu-select .checkbox:checked + label:after {
+    left: 26px; }
+
+#slider-range .ui-state-active:hover {
+  background: #00a2e8; }
+
+#hover-item {
+  background: #303030;
+  color: #ffffff; }
+
+/*# sourceMappingURL=left.css.map */

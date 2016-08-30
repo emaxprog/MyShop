@@ -1,0 +1,48 @@
+.contacts > ul, .authorization > ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.header-user {
+  background: #cccccc; }
+  .header-user > .mid {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #000000; }
+    .header-user > .mid a {
+      color: #000000;
+      text-decoration: none; }
+      .header-user > .mid a:hover {
+        color: #ffffff; }
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
+.contacts > ul {
+  display: flex; }
+  .contacts > ul li {
+    white-space: nowrap;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: bold; }
+
+.authorization > ul {
+  display: flex; }
+  .authorization > ul li {
+    margin: 0 20px; }
+    .authorization > ul li:first-child {
+      margin-left: 0; }
+    .authorization > ul li:last-child {
+      margin-right: 0; }
+    .authorization > ul li a {
+      color: #000000;
+      text-decoration: none; }
+      .authorization > ul li a:hover {
+        color: #00a2e8; }
+
+/*# sourceMappingURL=header.css.map */

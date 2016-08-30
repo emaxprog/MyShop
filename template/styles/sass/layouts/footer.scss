@@ -1,0 +1,60 @@
+@import "../templates";
+
+.wrapper-footer{
+  margin: 0;
+  padding: 0;
+  background: $DARK_GREY_COLOR;
+}
+
+.f-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  h2{
+    margin: 20px 0px;
+    padding: 0;
+    color: #ffffff;
+  }
+}
+
+
+.f-nav>.f-menu ul{
+  @extend %ul-clear;
+  li{
+    margin: 10px 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+    color: #ffffff;
+    &:hover{
+      color: $AQUA_COLOR;
+    }
+  }
+  label{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    &:hover{
+      color: $AQUA_COLOR;
+    }
+  }
+}
+
+.f-contacts{
+  ul{
+    @extend %ul-clear;
+    color: #ffffff;
+    li{
+      margin: 10px 0;
+      padding: 0;
+    }
+  }
+}
+
+.copy{
+  border-top: 1px solid $AQUA_COLOR;
+  text-align: center;
+  padding:20px 0;
+  color: #ffffff;
+}

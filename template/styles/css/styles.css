@@ -1,0 +1,768 @@
+@charset "UTF-8";
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.cart .table-cart, .admin .table-products, .admin .table-products-orders, .admin .table-orders, .admin-create .table-products, .admin-create .table-products-orders, .admin-create .table-orders, .admin-update .table-products, .admin-update .table-products-orders, .admin-update .table-orders, .admin-view .table-products, .admin-view .table-products-orders, .admin-view .table-orders, .admin-afisha .table-products, .admin-afisha .table-products-orders, .admin-afisha .table-orders {
+  border-spacing: 70px 0px;
+  margin: 20px 0; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th, .cart .table-cart td, .admin .table-products td, .admin .table-products-orders td, .admin .table-orders td, .admin-create .table-products td, .admin-create .table-products-orders td, .admin-create .table-orders td, .admin-update .table-products td, .admin-update .table-products-orders td, .admin-update .table-orders td, .admin-view .table-products td, .admin-view .table-products-orders td, .admin-view .table-orders td, .admin-afisha .table-products td, .admin-afisha .table-products-orders td, .admin-afisha .table-orders td {
+    padding: 10px;
+    text-align: center; }
+    .cart .table-cart th a, .admin .table-products th a, .admin .table-products-orders th a, .admin .table-orders th a, .admin-create .table-products th a, .admin-create .table-products-orders th a, .admin-create .table-orders th a, .admin-update .table-products th a, .admin-update .table-products-orders th a, .admin-update .table-orders th a, .admin-view .table-products th a, .admin-view .table-products-orders th a, .admin-view .table-orders th a, .admin-afisha .table-products th a, .admin-afisha .table-products-orders th a, .admin-afisha .table-orders th a, .cart .table-cart td a, .admin .table-products td a, .admin .table-products-orders td a, .admin .table-orders td a, .admin-create .table-products td a, .admin-create .table-products-orders td a, .admin-create .table-orders td a, .admin-update .table-products td a, .admin-update .table-products-orders td a, .admin-update .table-orders td a, .admin-view .table-products td a, .admin-view .table-products-orders td a, .admin-view .table-orders td a, .admin-afisha .table-products td a, .admin-afisha .table-products-orders td a, .admin-afisha .table-orders td a {
+      text-decoration: none;
+      color: #00a2e8; }
+      .cart .table-cart th a:hover, .admin .table-products th a:hover, .admin .table-products-orders th a:hover, .admin .table-orders th a:hover, .admin-create .table-products th a:hover, .admin-create .table-products-orders th a:hover, .admin-create .table-orders th a:hover, .admin-update .table-products th a:hover, .admin-update .table-products-orders th a:hover, .admin-update .table-orders th a:hover, .admin-view .table-products th a:hover, .admin-view .table-products-orders th a:hover, .admin-view .table-orders th a:hover, .admin-afisha .table-products th a:hover, .admin-afisha .table-products-orders th a:hover, .admin-afisha .table-orders th a:hover, .cart .table-cart td a:hover, .admin .table-products td a:hover, .admin .table-products-orders td a:hover, .admin .table-orders td a:hover, .admin-create .table-products td a:hover, .admin-create .table-products-orders td a:hover, .admin-create .table-orders td a:hover, .admin-update .table-products td a:hover, .admin-update .table-products-orders td a:hover, .admin-update .table-orders td a:hover, .admin-view .table-products td a:hover, .admin-view .table-products-orders td a:hover, .admin-view .table-orders td a:hover, .admin-afisha .table-products td a:hover, .admin-afisha .table-products-orders td a:hover, .admin-afisha .table-orders td a:hover {
+        color: #303030; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th {
+    border: none; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px/24px Arial,Tahoma,sans-serif; }
+
+div.mid {
+  width: 1200px;
+  margin: 0 auto; }
+
+/*Шапка сайта*/
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.cart .table-cart, .admin .table-products, .admin .table-products-orders, .admin .table-orders, .admin-create .table-products, .admin-create .table-products-orders, .admin-create .table-orders, .admin-update .table-products, .admin-update .table-products-orders, .admin-update .table-orders, .admin-view .table-products, .admin-view .table-products-orders, .admin-view .table-orders, .admin-afisha .table-products, .admin-afisha .table-products-orders, .admin-afisha .table-orders {
+  border-spacing: 70px 0px;
+  margin: 20px 0; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th, .cart .table-cart td, .admin .table-products td, .admin .table-products-orders td, .admin .table-orders td, .admin-create .table-products td, .admin-create .table-products-orders td, .admin-create .table-orders td, .admin-update .table-products td, .admin-update .table-products-orders td, .admin-update .table-orders td, .admin-view .table-products td, .admin-view .table-products-orders td, .admin-view .table-orders td, .admin-afisha .table-products td, .admin-afisha .table-products-orders td, .admin-afisha .table-orders td {
+    padding: 10px;
+    text-align: center; }
+    .cart .table-cart th a, .admin .table-products th a, .admin .table-products-orders th a, .admin .table-orders th a, .admin-create .table-products th a, .admin-create .table-products-orders th a, .admin-create .table-orders th a, .admin-update .table-products th a, .admin-update .table-products-orders th a, .admin-update .table-orders th a, .admin-view .table-products th a, .admin-view .table-products-orders th a, .admin-view .table-orders th a, .admin-afisha .table-products th a, .admin-afisha .table-products-orders th a, .admin-afisha .table-orders th a, .cart .table-cart td a, .admin .table-products td a, .admin .table-products-orders td a, .admin .table-orders td a, .admin-create .table-products td a, .admin-create .table-products-orders td a, .admin-create .table-orders td a, .admin-update .table-products td a, .admin-update .table-products-orders td a, .admin-update .table-orders td a, .admin-view .table-products td a, .admin-view .table-products-orders td a, .admin-view .table-orders td a, .admin-afisha .table-products td a, .admin-afisha .table-products-orders td a, .admin-afisha .table-orders td a {
+      text-decoration: none;
+      color: #00a2e8; }
+      .cart .table-cart th a:hover, .admin .table-products th a:hover, .admin .table-products-orders th a:hover, .admin .table-orders th a:hover, .admin-create .table-products th a:hover, .admin-create .table-products-orders th a:hover, .admin-create .table-orders th a:hover, .admin-update .table-products th a:hover, .admin-update .table-products-orders th a:hover, .admin-update .table-orders th a:hover, .admin-view .table-products th a:hover, .admin-view .table-products-orders th a:hover, .admin-view .table-orders th a:hover, .admin-afisha .table-products th a:hover, .admin-afisha .table-products-orders th a:hover, .admin-afisha .table-orders th a:hover, .cart .table-cart td a:hover, .admin .table-products td a:hover, .admin .table-products-orders td a:hover, .admin .table-orders td a:hover, .admin-create .table-products td a:hover, .admin-create .table-products-orders td a:hover, .admin-create .table-orders td a:hover, .admin-update .table-products td a:hover, .admin-update .table-products-orders td a:hover, .admin-update .table-orders td a:hover, .admin-view .table-products td a:hover, .admin-view .table-products-orders td a:hover, .admin-view .table-orders td a:hover, .admin-afisha .table-products td a:hover, .admin-afisha .table-products-orders td a:hover, .admin-afisha .table-orders td a:hover {
+        color: #303030; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th {
+    border: none; }
+
+.header-user {
+  background: #cccccc; }
+  .header-user > .mid {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    color: #000000; }
+    .header-user > .mid a {
+      color: #000000;
+      text-decoration: none; }
+      .header-user > .mid a:hover {
+        color: #ffffff; }
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
+.contacts > ul {
+  display: flex; }
+  .contacts > ul li {
+    white-space: nowrap;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: bold; }
+
+.authorization > ul {
+  display: flex; }
+  .authorization > ul li {
+    margin: 0 20px; }
+    .authorization > ul li:first-child {
+      margin-left: 0; }
+    .authorization > ul li:last-child {
+      margin-right: 0; }
+    .authorization > ul li a {
+      color: #000000;
+      text-decoration: none; }
+      .authorization > ul li a:hover {
+        color: #00a2e8; }
+
+/*Меню сайта*/
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.cart .table-cart, .admin .table-products, .admin .table-products-orders, .admin .table-orders, .admin-create .table-products, .admin-create .table-products-orders, .admin-create .table-orders, .admin-update .table-products, .admin-update .table-products-orders, .admin-update .table-orders, .admin-view .table-products, .admin-view .table-products-orders, .admin-view .table-orders, .admin-afisha .table-products, .admin-afisha .table-products-orders, .admin-afisha .table-orders {
+  border-spacing: 70px 0px;
+  margin: 20px 0; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th, .cart .table-cart td, .admin .table-products td, .admin .table-products-orders td, .admin .table-orders td, .admin-create .table-products td, .admin-create .table-products-orders td, .admin-create .table-orders td, .admin-update .table-products td, .admin-update .table-products-orders td, .admin-update .table-orders td, .admin-view .table-products td, .admin-view .table-products-orders td, .admin-view .table-orders td, .admin-afisha .table-products td, .admin-afisha .table-products-orders td, .admin-afisha .table-orders td {
+    padding: 10px;
+    text-align: center; }
+    .cart .table-cart th a, .admin .table-products th a, .admin .table-products-orders th a, .admin .table-orders th a, .admin-create .table-products th a, .admin-create .table-products-orders th a, .admin-create .table-orders th a, .admin-update .table-products th a, .admin-update .table-products-orders th a, .admin-update .table-orders th a, .admin-view .table-products th a, .admin-view .table-products-orders th a, .admin-view .table-orders th a, .admin-afisha .table-products th a, .admin-afisha .table-products-orders th a, .admin-afisha .table-orders th a, .cart .table-cart td a, .admin .table-products td a, .admin .table-products-orders td a, .admin .table-orders td a, .admin-create .table-products td a, .admin-create .table-products-orders td a, .admin-create .table-orders td a, .admin-update .table-products td a, .admin-update .table-products-orders td a, .admin-update .table-orders td a, .admin-view .table-products td a, .admin-view .table-products-orders td a, .admin-view .table-orders td a, .admin-afisha .table-products td a, .admin-afisha .table-products-orders td a, .admin-afisha .table-orders td a {
+      text-decoration: none;
+      color: #00a2e8; }
+      .cart .table-cart th a:hover, .admin .table-products th a:hover, .admin .table-products-orders th a:hover, .admin .table-orders th a:hover, .admin-create .table-products th a:hover, .admin-create .table-products-orders th a:hover, .admin-create .table-orders th a:hover, .admin-update .table-products th a:hover, .admin-update .table-products-orders th a:hover, .admin-update .table-orders th a:hover, .admin-view .table-products th a:hover, .admin-view .table-products-orders th a:hover, .admin-view .table-orders th a:hover, .admin-afisha .table-products th a:hover, .admin-afisha .table-products-orders th a:hover, .admin-afisha .table-orders th a:hover, .cart .table-cart td a:hover, .admin .table-products td a:hover, .admin .table-products-orders td a:hover, .admin .table-orders td a:hover, .admin-create .table-products td a:hover, .admin-create .table-products-orders td a:hover, .admin-create .table-orders td a:hover, .admin-update .table-products td a:hover, .admin-update .table-products-orders td a:hover, .admin-update .table-orders td a:hover, .admin-view .table-products td a:hover, .admin-view .table-products-orders td a:hover, .admin-view .table-orders td a:hover, .admin-afisha .table-products td a:hover, .admin-afisha .table-products-orders td a:hover, .admin-afisha .table-orders td a:hover {
+        color: #303030; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th {
+    border: none; }
+
+.wrapper-menu {
+  background: #00a2e8; }
+  .wrapper-menu .menu > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .wrapper-menu .menu > ul li {
+      white-space: nowrap; }
+      .wrapper-menu .menu > ul li a {
+        display: block;
+        padding: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px; }
+        .wrapper-menu .menu > ul li a:hover {
+          background: #303030; }
+
+/*фиксированное меню*/
+#fixed-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%; }
+
+/*popup*/
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.cart .table-cart, .admin .table-products, .admin .table-products-orders, .admin .table-orders, .admin-create .table-products, .admin-create .table-products-orders, .admin-create .table-orders, .admin-update .table-products, .admin-update .table-products-orders, .admin-update .table-orders, .admin-view .table-products, .admin-view .table-products-orders, .admin-view .table-orders, .admin-afisha .table-products, .admin-afisha .table-products-orders, .admin-afisha .table-orders {
+  border-spacing: 70px 0px;
+  margin: 20px 0; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th, .cart .table-cart td, .admin .table-products td, .admin .table-products-orders td, .admin .table-orders td, .admin-create .table-products td, .admin-create .table-products-orders td, .admin-create .table-orders td, .admin-update .table-products td, .admin-update .table-products-orders td, .admin-update .table-orders td, .admin-view .table-products td, .admin-view .table-products-orders td, .admin-view .table-orders td, .admin-afisha .table-products td, .admin-afisha .table-products-orders td, .admin-afisha .table-orders td {
+    padding: 10px;
+    text-align: center; }
+    .cart .table-cart th a, .admin .table-products th a, .admin .table-products-orders th a, .admin .table-orders th a, .admin-create .table-products th a, .admin-create .table-products-orders th a, .admin-create .table-orders th a, .admin-update .table-products th a, .admin-update .table-products-orders th a, .admin-update .table-orders th a, .admin-view .table-products th a, .admin-view .table-products-orders th a, .admin-view .table-orders th a, .admin-afisha .table-products th a, .admin-afisha .table-products-orders th a, .admin-afisha .table-orders th a, .cart .table-cart td a, .admin .table-products td a, .admin .table-products-orders td a, .admin .table-orders td a, .admin-create .table-products td a, .admin-create .table-products-orders td a, .admin-create .table-orders td a, .admin-update .table-products td a, .admin-update .table-products-orders td a, .admin-update .table-orders td a, .admin-view .table-products td a, .admin-view .table-products-orders td a, .admin-view .table-orders td a, .admin-afisha .table-products td a, .admin-afisha .table-products-orders td a, .admin-afisha .table-orders td a {
+      text-decoration: none;
+      color: #00a2e8; }
+      .cart .table-cart th a:hover, .admin .table-products th a:hover, .admin .table-products-orders th a:hover, .admin .table-orders th a:hover, .admin-create .table-products th a:hover, .admin-create .table-products-orders th a:hover, .admin-create .table-orders th a:hover, .admin-update .table-products th a:hover, .admin-update .table-products-orders th a:hover, .admin-update .table-orders th a:hover, .admin-view .table-products th a:hover, .admin-view .table-products-orders th a:hover, .admin-view .table-orders th a:hover, .admin-afisha .table-products th a:hover, .admin-afisha .table-products-orders th a:hover, .admin-afisha .table-orders th a:hover, .cart .table-cart td a:hover, .admin .table-products td a:hover, .admin .table-products-orders td a:hover, .admin .table-orders td a:hover, .admin-create .table-products td a:hover, .admin-create .table-products-orders td a:hover, .admin-create .table-orders td a:hover, .admin-update .table-products td a:hover, .admin-update .table-products-orders td a:hover, .admin-update .table-orders td a:hover, .admin-view .table-products td a:hover, .admin-view .table-products-orders td a:hover, .admin-view .table-orders td a:hover, .admin-afisha .table-products td a:hover, .admin-afisha .table-products-orders td a:hover, .admin-afisha .table-orders td a:hover {
+        color: #303030; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th {
+    border: none; }
+
+.popup-checkbox, .popup {
+  display: none; }
+
+.popup-checkbox:checked + .popup {
+  display: block;
+  opacity: 1; }
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .popup:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000000;
+    opacity: 0.5;
+    z-index: 1; }
+
+.popup-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 550px;
+  box-sizing: border-box;
+  margin: auto;
+  background: #ffffff;
+  z-index: 2;
+  border: 1px solid #cccccc;
+  padding: 20px; }
+
+.popup-closer {
+  position: absolute;
+  top: -33px;
+  right: -32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cccccc;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #ffffff; }
+  .popup-closer:hover {
+    background: #303030;
+    cursor: pointer; }
+
+.popup-shower {
+  display: block;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 20px; }
+  .popup-shower:hover {
+    background: #303030;
+    color: #ffffff;
+    cursor: pointer; }
+
+.feedback-content {
+  width: 100%;
+  height: 100%; }
+
+.feedback-content, .row {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 0 20px 0;
+  color: #303030; }
+  .feedback-content h2, .row h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0; }
+  .feedback-content label, .row label {
+    text-align: center; }
+  .feedback-content .txt, .row .txt {
+    height: 30px;
+    font-size: 18px; }
+  .feedback-content .txtarea, .row .txtarea {
+    height: 130px; }
+  .feedback-content .feedback-button, .row .feedback-button {
+    display: flex;
+    justify-content: center; }
+    .feedback-content .feedback-button #submitbtn, .row .feedback-button #submitbtn {
+      border: none;
+      padding: 10px;
+      text-transform: uppercase;
+      background: #00a2e8;
+      color: #ffffff;
+      font-size: 16px; }
+      .feedback-content .feedback-button #submitbtn:hover, .row .feedback-button #submitbtn:hover {
+        background: #303030; }
+
+.label {
+  display: flex;
+  justify-content: space-between; }
+  .label .error {
+    color: #ff0000;
+    font-size: 14px; }
+
+.popup-success-wrapper {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 10%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  z-index: 2; }
+  .popup-success-wrapper:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 1;
+    opacity: 0.3; }
+
+.popup-success {
+  color: #ffffff;
+  z-index: 2; }
+
+/*Контент сайта*/
+.wrapper-content > .mid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+  .wrapper-content > .mid .left {
+    flex-basis: 240px; }
+  .wrapper-content > .mid .center {
+    flex-basis: 940px; }
+
+/*Меню товаров*/
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.cart .table-cart, .admin .table-products, .admin .table-products-orders, .admin .table-orders, .admin-create .table-products, .admin-create .table-products-orders, .admin-create .table-orders, .admin-update .table-products, .admin-update .table-products-orders, .admin-update .table-orders, .admin-view .table-products, .admin-view .table-products-orders, .admin-view .table-orders, .admin-afisha .table-products, .admin-afisha .table-products-orders, .admin-afisha .table-orders {
+  border-spacing: 70px 0px;
+  margin: 20px 0; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th, .cart .table-cart td, .admin .table-products td, .admin .table-products-orders td, .admin .table-orders td, .admin-create .table-products td, .admin-create .table-products-orders td, .admin-create .table-orders td, .admin-update .table-products td, .admin-update .table-products-orders td, .admin-update .table-orders td, .admin-view .table-products td, .admin-view .table-products-orders td, .admin-view .table-orders td, .admin-afisha .table-products td, .admin-afisha .table-products-orders td, .admin-afisha .table-orders td {
+    padding: 10px;
+    text-align: center; }
+    .cart .table-cart th a, .admin .table-products th a, .admin .table-products-orders th a, .admin .table-orders th a, .admin-create .table-products th a, .admin-create .table-products-orders th a, .admin-create .table-orders th a, .admin-update .table-products th a, .admin-update .table-products-orders th a, .admin-update .table-orders th a, .admin-view .table-products th a, .admin-view .table-products-orders th a, .admin-view .table-orders th a, .admin-afisha .table-products th a, .admin-afisha .table-products-orders th a, .admin-afisha .table-orders th a, .cart .table-cart td a, .admin .table-products td a, .admin .table-products-orders td a, .admin .table-orders td a, .admin-create .table-products td a, .admin-create .table-products-orders td a, .admin-create .table-orders td a, .admin-update .table-products td a, .admin-update .table-products-orders td a, .admin-update .table-orders td a, .admin-view .table-products td a, .admin-view .table-products-orders td a, .admin-view .table-orders td a, .admin-afisha .table-products td a, .admin-afisha .table-products-orders td a, .admin-afisha .table-orders td a {
+      text-decoration: none;
+      color: #00a2e8; }
+      .cart .table-cart th a:hover, .admin .table-products th a:hover, .admin .table-products-orders th a:hover, .admin .table-orders th a:hover, .admin-create .table-products th a:hover, .admin-create .table-products-orders th a:hover, .admin-create .table-orders th a:hover, .admin-update .table-products th a:hover, .admin-update .table-products-orders th a:hover, .admin-update .table-orders th a:hover, .admin-view .table-products th a:hover, .admin-view .table-products-orders th a:hover, .admin-view .table-orders th a:hover, .admin-afisha .table-products th a:hover, .admin-afisha .table-products-orders th a:hover, .admin-afisha .table-orders th a:hover, .cart .table-cart td a:hover, .admin .table-products td a:hover, .admin .table-products-orders td a:hover, .admin .table-orders td a:hover, .admin-create .table-products td a:hover, .admin-create .table-products-orders td a:hover, .admin-create .table-orders td a:hover, .admin-update .table-products td a:hover, .admin-update .table-products-orders td a:hover, .admin-update .table-orders td a:hover, .admin-view .table-products td a:hover, .admin-view .table-products-orders td a:hover, .admin-view .table-orders td a:hover, .admin-afisha .table-products td a:hover, .admin-afisha .table-products-orders td a:hover, .admin-afisha .table-orders td a:hover {
+        color: #303030; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th {
+    border: none; }
+
+.menu-products {
+  margin: 20px 0; }
+  .menu-products ul li {
+    position: relative; }
+    .menu-products ul li:hover .sub-menu {
+      display: block; }
+    .menu-products ul li a {
+      text-decoration: none;
+      display: block;
+      border: 1px solid #00a2e8;
+      padding: 20px;
+      color: #303030;
+      margin-bottom: -1px; }
+      .menu-products ul li a:hover {
+        background: #303030;
+        color: #ffffff; }
+    .menu-products ul li .sub-menu {
+      position: absolute;
+      display: none;
+      left: 238px;
+      z-index: 10;
+      background: #ffffff;
+      top: 0;
+      border-left: 2px solid #00a2e8; }
+      .menu-products ul li .sub-menu a {
+        width: 210px; }
+
+.menu-select {
+  margin: 20px 0;
+  border: 1px solid #00a2e8; }
+  .menu-select #form-selection {
+    display: flex;
+    flex-direction: column; }
+  .menu-select .range-price {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 20px; }
+    .menu-select .range-price .price-input {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0; }
+      .menu-select .range-price .price-input input[type=text] {
+        width: 80px;
+        height: 30px;
+        font-size: 18px; }
+  .menu-select .brand {
+    border-top: 1px solid #00a2e8;
+    padding: 20px; }
+    .menu-select .brand .brand-list {
+      padding: 5px;
+      font-size: 18px;
+      display: flex;
+      flex-flow: column nowrap;
+      height: 200px;
+      overflow: auto;
+      margin: 10px 0;
+      border: 1px solid #00a2e8; }
+      .menu-select .brand .brand-list .brand-row {
+        margin: 5px 0; }
+  .menu-select #btn-selection {
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background: #00a2e8;
+    color: #FFFFFF;
+    margin: 0 20px 20px 20px; }
+  .menu-select .checkbox + label {
+    cursor: pointer; }
+  .menu-select .checkbox:not(checked) {
+    position: absolute;
+    opacity: 0; }
+  .menu-select .checkbox:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 60px; }
+  .menu-select .checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.2); }
+  .menu-select .checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all .2s; }
+  .menu-select .checkbox:checked + label:before {
+    background: #00a2e8; }
+  .menu-select .checkbox:checked + label:after {
+    left: 26px; }
+
+#slider-range .ui-state-active:hover {
+  background: #00a2e8; }
+
+#hover-item {
+  background: #303030;
+  color: #ffffff; }
+
+/*Центр*/
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.cart .table-cart, .admin .table-products, .admin .table-products-orders, .admin .table-orders, .admin-create .table-products, .admin-create .table-products-orders, .admin-create .table-orders, .admin-update .table-products, .admin-update .table-products-orders, .admin-update .table-orders, .admin-view .table-products, .admin-view .table-products-orders, .admin-view .table-orders, .admin-afisha .table-products, .admin-afisha .table-products-orders, .admin-afisha .table-orders {
+  border-spacing: 70px 0px;
+  margin: 20px 0; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th, .cart .table-cart td, .admin .table-products td, .admin .table-products-orders td, .admin .table-orders td, .admin-create .table-products td, .admin-create .table-products-orders td, .admin-create .table-orders td, .admin-update .table-products td, .admin-update .table-products-orders td, .admin-update .table-orders td, .admin-view .table-products td, .admin-view .table-products-orders td, .admin-view .table-orders td, .admin-afisha .table-products td, .admin-afisha .table-products-orders td, .admin-afisha .table-orders td {
+    padding: 10px;
+    text-align: center; }
+    .cart .table-cart th a, .admin .table-products th a, .admin .table-products-orders th a, .admin .table-orders th a, .admin-create .table-products th a, .admin-create .table-products-orders th a, .admin-create .table-orders th a, .admin-update .table-products th a, .admin-update .table-products-orders th a, .admin-update .table-orders th a, .admin-view .table-products th a, .admin-view .table-products-orders th a, .admin-view .table-orders th a, .admin-afisha .table-products th a, .admin-afisha .table-products-orders th a, .admin-afisha .table-orders th a, .cart .table-cart td a, .admin .table-products td a, .admin .table-products-orders td a, .admin .table-orders td a, .admin-create .table-products td a, .admin-create .table-products-orders td a, .admin-create .table-orders td a, .admin-update .table-products td a, .admin-update .table-products-orders td a, .admin-update .table-orders td a, .admin-view .table-products td a, .admin-view .table-products-orders td a, .admin-view .table-orders td a, .admin-afisha .table-products td a, .admin-afisha .table-products-orders td a, .admin-afisha .table-orders td a {
+      text-decoration: none;
+      color: #00a2e8; }
+      .cart .table-cart th a:hover, .admin .table-products th a:hover, .admin .table-products-orders th a:hover, .admin .table-orders th a:hover, .admin-create .table-products th a:hover, .admin-create .table-products-orders th a:hover, .admin-create .table-orders th a:hover, .admin-update .table-products th a:hover, .admin-update .table-products-orders th a:hover, .admin-update .table-orders th a:hover, .admin-view .table-products th a:hover, .admin-view .table-products-orders th a:hover, .admin-view .table-orders th a:hover, .admin-afisha .table-products th a:hover, .admin-afisha .table-products-orders th a:hover, .admin-afisha .table-orders th a:hover, .cart .table-cart td a:hover, .admin .table-products td a:hover, .admin .table-products-orders td a:hover, .admin .table-orders td a:hover, .admin-create .table-products td a:hover, .admin-create .table-products-orders td a:hover, .admin-create .table-orders td a:hover, .admin-update .table-products td a:hover, .admin-update .table-products-orders td a:hover, .admin-update .table-orders td a:hover, .admin-view .table-products td a:hover, .admin-view .table-products-orders td a:hover, .admin-view .table-orders td a:hover, .admin-afisha .table-products td a:hover, .admin-afisha .table-products-orders td a:hover, .admin-afisha .table-orders td a:hover {
+        color: #303030; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th {
+    border: none; }
+
+/*Афиша*/
+.center > .afisha {
+  margin-top: 20px; }
+
+.center > .afisha > img {
+  width: 740px; }
+
+/*Блоки товаров*/
+.blocks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
+.block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  position: relative;
+  width: 250px;
+  height: 370px; }
+  .block:hover {
+    transform: scale(1.1);
+    transition: transform 0.7s; }
+  .block .img-product {
+    text-align: center; }
+    .block .img-product > img {
+      max-width: 250px;
+      max-height: 150px; }
+  .block a {
+    text-decoration: none;
+    color: #000000; }
+  .block .about-product {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end; }
+    .block .about-product ul {
+      text-align: center; }
+      .block .about-product ul li {
+        margin-bottom: 10px; }
+        .block .about-product ul li:first-child {
+          margin-top: 20px;
+          font-size: 18px; }
+        .block .about-product ul li.old-price {
+          text-decoration: line-through; }
+        .block .about-product ul li:last-child {
+          font-size: 26px;
+          margin-bottom: 20px; }
+  .block .button-add-basket a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    background: #00a2e8;
+    text-align: center;
+    color: #ffffff; }
+    .block .button-add-basket a:hover {
+      background: #303030;
+      color: #ffffff; }
+
+.latest-products h1, .recomended-products h1 {
+  font-weight: normal; }
+
+.new, .sale {
+  position: absolute;
+  margin: 10px;
+  top: 0;
+  right: 0; }
+
+/*Pagination*/
+div.pagination {
+  display: flex;
+  justify-content: center; }
+
+ul.pagination {
+  display: flex; }
+  ul.pagination li {
+    margin: 5px; }
+  ul.pagination li.active a {
+    background: #303030; }
+  ul.pagination a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    background: #00a2e8;
+    margin: 20px 0; }
+    ul.pagination a:hover {
+      background: #303030; }
+
+/*Футер*/
+.contacts > ul, .authorization > ul, .wrapper-menu .menu > ul, .menu-products ul, .block .about-product ul, ul.pagination, .f-nav > .f-menu ul, .f-contacts ul, .cart .brief-info > ul, .admin ul.admin-menu, .admin-create ul.admin-menu, .admin-update ul.admin-menu, .admin-view ul.admin-menu, .admin-afisha ul.admin-menu, .cabinet-menu {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.cart .table-cart, .admin .table-products, .admin .table-products-orders, .admin .table-orders, .admin-create .table-products, .admin-create .table-products-orders, .admin-create .table-orders, .admin-update .table-products, .admin-update .table-products-orders, .admin-update .table-orders, .admin-view .table-products, .admin-view .table-products-orders, .admin-view .table-orders, .admin-afisha .table-products, .admin-afisha .table-products-orders, .admin-afisha .table-orders {
+  border-spacing: 70px 0px;
+  margin: 20px 0; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th, .cart .table-cart td, .admin .table-products td, .admin .table-products-orders td, .admin .table-orders td, .admin-create .table-products td, .admin-create .table-products-orders td, .admin-create .table-orders td, .admin-update .table-products td, .admin-update .table-products-orders td, .admin-update .table-orders td, .admin-view .table-products td, .admin-view .table-products-orders td, .admin-view .table-orders td, .admin-afisha .table-products td, .admin-afisha .table-products-orders td, .admin-afisha .table-orders td {
+    padding: 10px;
+    text-align: center; }
+    .cart .table-cart th a, .admin .table-products th a, .admin .table-products-orders th a, .admin .table-orders th a, .admin-create .table-products th a, .admin-create .table-products-orders th a, .admin-create .table-orders th a, .admin-update .table-products th a, .admin-update .table-products-orders th a, .admin-update .table-orders th a, .admin-view .table-products th a, .admin-view .table-products-orders th a, .admin-view .table-orders th a, .admin-afisha .table-products th a, .admin-afisha .table-products-orders th a, .admin-afisha .table-orders th a, .cart .table-cart td a, .admin .table-products td a, .admin .table-products-orders td a, .admin .table-orders td a, .admin-create .table-products td a, .admin-create .table-products-orders td a, .admin-create .table-orders td a, .admin-update .table-products td a, .admin-update .table-products-orders td a, .admin-update .table-orders td a, .admin-view .table-products td a, .admin-view .table-products-orders td a, .admin-view .table-orders td a, .admin-afisha .table-products td a, .admin-afisha .table-products-orders td a, .admin-afisha .table-orders td a {
+      text-decoration: none;
+      color: #00a2e8; }
+      .cart .table-cart th a:hover, .admin .table-products th a:hover, .admin .table-products-orders th a:hover, .admin .table-orders th a:hover, .admin-create .table-products th a:hover, .admin-create .table-products-orders th a:hover, .admin-create .table-orders th a:hover, .admin-update .table-products th a:hover, .admin-update .table-products-orders th a:hover, .admin-update .table-orders th a:hover, .admin-view .table-products th a:hover, .admin-view .table-products-orders th a:hover, .admin-view .table-orders th a:hover, .admin-afisha .table-products th a:hover, .admin-afisha .table-products-orders th a:hover, .admin-afisha .table-orders th a:hover, .cart .table-cart td a:hover, .admin .table-products td a:hover, .admin .table-products-orders td a:hover, .admin .table-orders td a:hover, .admin-create .table-products td a:hover, .admin-create .table-products-orders td a:hover, .admin-create .table-orders td a:hover, .admin-update .table-products td a:hover, .admin-update .table-products-orders td a:hover, .admin-update .table-orders td a:hover, .admin-view .table-products td a:hover, .admin-view .table-products-orders td a:hover, .admin-view .table-orders td a:hover, .admin-afisha .table-products td a:hover, .admin-afisha .table-products-orders td a:hover, .admin-afisha .table-orders td a:hover {
+        color: #303030; }
+  .cart .table-cart th, .admin .table-products th, .admin .table-products-orders th, .admin .table-orders th, .admin-create .table-products th, .admin-create .table-products-orders th, .admin-create .table-orders th, .admin-update .table-products th, .admin-update .table-products-orders th, .admin-update .table-orders th, .admin-view .table-products th, .admin-view .table-products-orders th, .admin-view .table-orders th, .admin-afisha .table-products th, .admin-afisha .table-products-orders th, .admin-afisha .table-orders th {
+    border: none; }
+
+.wrapper-footer {
+  margin: 0;
+  padding: 0;
+  background: #303030; }
+
+.f-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; }
+  .f-container h2 {
+    margin: 20px 0px;
+    padding: 0;
+    color: #ffffff; }
+
+.f-nav > .f-menu ul li {
+  margin: 10px 0;
+  padding: 0; }
+.f-nav > .f-menu ul a {
+  text-decoration: none;
+  color: #ffffff; }
+  .f-nav > .f-menu ul a:hover {
+    color: #00a2e8; }
+.f-nav > .f-menu ul label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+  .f-nav > .f-menu ul label:hover {
+    color: #00a2e8; }
+
+.f-contacts ul {
+  color: #ffffff; }
+  .f-contacts ul li {
+    margin: 10px 0;
+    padding: 0; }
+
+.copy {
+  border-top: 1px solid #00a2e8;
+  text-align: center;
+  padding: 20px 0;
+  color: #ffffff; }
+
+/*Корзина*/
+.center-cart {
+  width: 100%; }
+
+.cart .empty-cart {
+  margin-bottom: 100px; }
+.cart a.checkout {
+  display: flex;
+  width: 160px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+  text-decoration: none;
+  color: #ffffff;
+  background: #00a2e8;
+  padding: 10px; }
+  .cart a.checkout:hover {
+    background: #303030; }
+.cart input[type=text], .cart textarea {
+  height: 30px;
+  width: 300px;
+  border: none;
+  padding: 2px;
+  background: #cccccc;
+  font-size: 18px; }
+.cart textarea {
+  height: 100px; }
+.cart input, .cart textarea {
+  margin-bottom: 20px; }
+.cart input[type=submit] {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  background: #00a2e8;
+  color: #ffffff;
+  font-size: 18px; }
+  .cart input[type=submit]:hover {
+    background: #303030; }
+
+/*Админка*/
+.center-admin {
+  width: 100%; }
+
+.admin ul.admin-menu li, .admin-create ul.admin-menu li, .admin-update ul.admin-menu li, .admin-view ul.admin-menu li, .admin-afisha ul.admin-menu li {
+  margin: 10px; }
+.admin ul.admin-menu a, .admin-create ul.admin-menu a, .admin-update ul.admin-menu a, .admin-view ul.admin-menu a, .admin-afisha ul.admin-menu a {
+  text-decoration: none;
+  color: #00a2e8; }
+  .admin ul.admin-menu a:hover, .admin-create ul.admin-menu a:hover, .admin-update ul.admin-menu a:hover, .admin-view ul.admin-menu a:hover, .admin-afisha ul.admin-menu a:hover {
+    color: #303030; }
+.admin a.btn-add-product, .admin-create a.btn-add-product, .admin-update a.btn-add-product, .admin-view a.btn-add-product, .admin-afisha a.btn-add-product {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  padding: 10px;
+  background: #00a2e8; }
+  .admin a.btn-add-product:hover, .admin-create a.btn-add-product:hover, .admin-update a.btn-add-product:hover, .admin-view a.btn-add-product:hover, .admin-afisha a.btn-add-product:hover {
+    background: #303030; }
+.admin .table-orders-info, .admin-create .table-orders-info, .admin-update .table-orders-info, .admin-view .table-orders-info, .admin-afisha .table-orders-info {
+  border-collapse: collapse; }
+  .admin .table-orders-info td, .admin .table-orders-info th, .admin-create .table-orders-info td, .admin-create .table-orders-info th, .admin-update .table-orders-info td, .admin-update .table-orders-info th, .admin-view .table-orders-info td, .admin-view .table-orders-info th, .admin-afisha .table-orders-info td, .admin-afisha .table-orders-info th {
+    padding: 0 20px; }
+.admin input[type=text], .admin select, .admin textarea, .admin-create input[type=text], .admin-create select, .admin-create textarea, .admin-update input[type=text], .admin-update select, .admin-update textarea, .admin-view input[type=text], .admin-view select, .admin-view textarea, .admin-afisha input[type=text], .admin-afisha select, .admin-afisha textarea {
+  height: 30px;
+  width: 300px;
+  border: none;
+  padding: 2px;
+  background: #cccccc;
+  font-size: 18px; }
+.admin textarea, .admin-create textarea, .admin-update textarea, .admin-view textarea, .admin-afisha textarea {
+  height: 100px; }
+.admin input, .admin select, .admin textarea, .admin-create input, .admin-create select, .admin-create textarea, .admin-update input, .admin-update select, .admin-update textarea, .admin-view input, .admin-view select, .admin-view textarea, .admin-afisha input, .admin-afisha select, .admin-afisha textarea {
+  margin-bottom: 20px; }
+.admin input[type=submit], .admin-create input[type=submit], .admin-update input[type=submit], .admin-view input[type=submit], .admin-afisha input[type=submit] {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  background: #00a2e8;
+  color: #ffffff;
+  font-size: 18px; }
+  .admin input[type=submit]:hover, .admin-create input[type=submit]:hover, .admin-update input[type=submit]:hover, .admin-view input[type=submit]:hover, .admin-afisha input[type=submit]:hover {
+    background: #303030; }
+
+.admin-delete input[type=submit], .admin-delete .btn-back, .admin-view input[type=submit], .admin-view .btn-back {
+  text-decoration: none;
+  padding: 10px;
+  border: none;
+  background: #00a2e8;
+  color: #ffffff;
+  font-size: 18px; }
+  .admin-delete input[type=submit]:hover, .admin-delete .btn-back:hover, .admin-view input[type=submit]:hover, .admin-view .btn-back:hover {
+    background: #303030; }
+
+.cabinet-menu {
+  margin: 20px 0; }
+  .cabinet-menu a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #00a2e8; }
+    .cabinet-menu a:hover {
+      color: #303030; }
+
+.correct-form input {
+  margin-bottom: 20px; }
+  .correct-form input[type=text], .correct-form input[type=password] {
+    height: 30px;
+    width: 300px;
+    border: none;
+    padding: 2px;
+    background: #cccccc;
+    font-size: 18px; }
+.correct-form input[type=submit] {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  background: #00a2e8;
+  color: #ffffff;
+  font-size: 18px; }
+  .correct-form input[type=submit]:hover {
+    background: #303030; }
+
+/*Авторизация*/
+.registration, .login {
+  margin-top: 20px; }
+  .registration input, .login input {
+    margin-bottom: 20px; }
+    .registration input[type=text], .registration input[type=password], .login input[type=text], .login input[type=password] {
+      height: 30px;
+      width: 300px;
+      border: none;
+      padding: 2px;
+      background: #cccccc;
+      font-size: 18px; }
+  .registration input[type=submit], .login input[type=submit] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    background: #00a2e8;
+    color: #ffffff;
+    font-size: 18px; }
+    .registration input[type=submit]:hover, .login input[type=submit]:hover {
+      background: #303030; }
+  .registration input[type=text], .registration input[type=email], .registration input[type=password], .login input[type=text], .login input[type=email], .login input[type=password] {
+    height: 30px;
+    width: 300px;
+    border: none;
+    padding: 2px;
+    background: #cccccc;
+    font-size: 18px; }
+
+@media screen and (max-width: 1200px) {
+  div.mid {
+    width: 95%; } }
+
+/*# sourceMappingURL=styles.css.map */

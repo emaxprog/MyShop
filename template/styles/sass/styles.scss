@@ -1,0 +1,60 @@
+@import "templates";
+body{
+  margin: 0;
+  padding:0;
+  font: 16px/24px Arial,Tahoma,sans-serif;
+}
+
+div.mid{
+  width:1200px;
+  margin: 0 auto;
+}
+
+/*Шапка сайта*/
+@import "layouts/header";
+
+/*Меню сайта*/
+@import "layouts/menu";
+
+/*popup*/
+@import "layouts/popup";
+
+/*Контент сайта*/
+.wrapper-content>.mid{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  .left{
+    flex-basis: 1000-740-20px;
+  }
+  .center{
+    flex-basis: 940px;
+  }
+}
+/*Меню товаров*/
+@import "layouts/left";
+/*Центр*/
+@import "layouts/center";
+
+/*Футер*/
+
+@import "layouts/footer";
+
+/*Корзина*/
+@import "cart/styles";
+
+/*Админка*/
+
+@import "admin/index";
+
+@import "cabinet/index";
+
+/*Авторизация*/
+@import "user/styles";
+
+
+@media screen and (max-width: 1200px){
+  div.mid{
+    width:95%;
+  }
+}

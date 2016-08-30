@@ -1,0 +1,48 @@
+.f-nav > .f-menu ul, .f-contacts ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0; }
+
+.wrapper-footer {
+  margin: 0;
+  padding: 0;
+  background: #303030; }
+
+.f-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; }
+  .f-container h2 {
+    margin: 20px 0px;
+    padding: 0;
+    color: #ffffff; }
+
+.f-nav > .f-menu ul li {
+  margin: 10px 0;
+  padding: 0; }
+.f-nav > .f-menu ul a {
+  text-decoration: none;
+  color: #ffffff; }
+  .f-nav > .f-menu ul a:hover {
+    color: #00a2e8; }
+.f-nav > .f-menu ul label {
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+  .f-nav > .f-menu ul label:hover {
+    color: #00a2e8; }
+
+.f-contacts ul {
+  color: #ffffff; }
+  .f-contacts ul li {
+    margin: 10px 0;
+    padding: 0; }
+
+.copy {
+  border-top: 1px solid #00a2e8;
+  text-align: center;
+  padding: 20px 0;
+  color: #ffffff; }
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,41 @@
+.cabinet-menu {
+  @extend %ul-clear;
+  margin: 20px 0;
+  a{
+    margin: 0 20px;
+    text-decoration: none;
+    color: $AQUA_COLOR;
+    &:hover{
+      color: $DARK_GREY_COLOR;
+    }
+  }
+}
+
+.correct-form {
+
+  input {
+    margin-bottom: 20px;
+    &[type=text], &[type=password] {
+      height: 30px;
+      width: 300px;
+      border: none;
+      padding: 2px;
+      background: $LIGHT_GREY_COLOR;
+      font: {
+        size: 18px;
+      }
+    }
+  }
+
+  input[type=submit] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    background: $AQUA_COLOR;
+    color: #ffffff;
+    font-size: 18px;
+    &:hover {
+      background: $DARK_GREY_COLOR;
+    }
+  }
+}

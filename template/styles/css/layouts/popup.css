@@ -1,0 +1,137 @@
+.popup-checkbox, .popup {
+  display: none; }
+
+.popup-checkbox:checked + .popup {
+  display: block;
+  opacity: 1; }
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+  .popup:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000000;
+    opacity: 0.5;
+    z-index: 1; }
+
+.popup-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 550px;
+  box-sizing: border-box;
+  margin: auto;
+  background: #ffffff;
+  z-index: 2;
+  border: 1px solid #cccccc;
+  padding: 20px; }
+
+.popup-closer {
+  position: absolute;
+  top: -33px;
+  right: -32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cccccc;
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: #ffffff; }
+  .popup-closer:hover {
+    background: #303030;
+    cursor: pointer; }
+
+.popup-shower {
+  display: block;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 20px; }
+  .popup-shower:hover {
+    background: #303030;
+    color: #ffffff;
+    cursor: pointer; }
+
+.feedback-content {
+  width: 100%;
+  height: 100%; }
+
+.feedback-content, .row {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 0 20px 0;
+  color: #303030; }
+  .feedback-content h2, .row h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    padding: 0; }
+  .feedback-content label, .row label {
+    text-align: center; }
+  .feedback-content .txt, .row .txt {
+    height: 30px;
+    font-size: 18px; }
+  .feedback-content .txtarea, .row .txtarea {
+    height: 130px; }
+  .feedback-content .feedback-button, .row .feedback-button {
+    display: flex;
+    justify-content: center; }
+    .feedback-content .feedback-button #submitbtn, .row .feedback-button #submitbtn {
+      border: none;
+      padding: 10px;
+      text-transform: uppercase;
+      background: #00a2e8;
+      color: #ffffff;
+      font-size: 16px; }
+      .feedback-content .feedback-button #submitbtn:hover, .row .feedback-button #submitbtn:hover {
+        background: #303030; }
+
+.label {
+  display: flex;
+  justify-content: space-between; }
+  .label .error {
+    color: #ff0000;
+    font-size: 14px; }
+
+.popup-success-wrapper {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 10%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  z-index: 2; }
+  .popup-success-wrapper:before {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 1;
+    opacity: 0.3; }
+
+.popup-success {
+  color: #ffffff;
+  z-index: 2; }
+
+/*# sourceMappingURL=popup.css.map */

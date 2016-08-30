@@ -1,0 +1,130 @@
+<?php
+
+/**
+ * Created by PhpStorm.
+ * User: alexandr
+ * Date: 22.08.16
+ * Time: 14:06
+ */
+class AdminProductController extends AdminBase
+{
+    public function actionIndex()
+    {
+        self::checkAdmin();
+
+        $products = Product::getProductsAll();
+
+        require_once(ROOT . '/views/admin_product/index.php');
+        return true;
+    }
+
+    public function actionCreate()
+    {
+        self::checkAdmin();
+
+        $categories = Category::getCategoriesAll();
+        $subcategories = Category::getSubcategoriesAll();
+
+        $errors = false;
+        if (isset($_POST['submit'])) {
+            $options['name'] = $_POST['name'];
+            $options['code'] = $_POST['code'];
+            $options['price'] = $_POST['price'];
+            $options['category_id'] = $_POST['category_id'];
+            $options['brand'] = $_POST['brand'];
+            $options['availability'] = $_POST['availability'];
+            $options['description'] = $_POST['description'];
+            $options['is_new'] = $_POST['is_new'];
+            $options['is_recommended'] = $_POST['is_recommended'];
+            $options['status'] = $_POST['status'];
+
+            $images = array();
+
+            for ($i = 0; isset($_FILES['image']['tmp_name'][$i]); $i++) {
+                if (is_uploaded_file($_FILES['image']['tmp_name'][$i])) {
+                    if (move_uploaded_file($_FILES['image']['tmp_name'][$i], $_SERVER['DOCUMENT_ROOT'] . '/upload/products/' . $_FILES['image']['name'][$i]))
+                        $images[$i] = '/upload/products/' . $_FILES['image']['name'][$i];
+                    else
+                        $errors[] = 'Ошибка при загрузке файла' . $i + 1;
+                } else {
+                    $images[$i] = null;
+                }
+            }
+            $options['image_path'] = json_encode($images);
+
+            if (!isset($options['name']) || empty($options['name']))
+                $errors[] = 'Введите название продукта!';
+            if (!$errors) {
+
+                Product::createProduct($options);
+                header('Location:/admin/product');
+            }
+        }
+
+        require_once(ROOT . '/views/admin_product/create.php');
+        return true;
+    }
+
+    public function actionUpdate($id)
+    {
+        self::checkAdmin();
+
+        $product = Product::getProductById($id);
+
+        $imagesPaths = json_decode($product['image_path'], true);
+
+        $categories = Category::getCategoriesAll();
+
+        $errors = false;
+
+        if (isset($_POST['submit'])) {
+            $options['name'] = $_POST['name'];
+            $options['code'] = $_POST['code'];
+            $options['price'] = $_POST['price'];
+            $options['old_price'] = $_POST['old_price'];
+            $options['category_id'] = $_POST['category_id'];
+            $options['brand'] = $_POST['brand'];
+            $options['availability'] = $_POST['availability'];
+            $options['description'] = $_POST['description'];
+            $options['is_new'] = $_POST['is_new'];
+            $options['is_recommended'] = $_POST['is_recommended'];
+            $options['status'] = $_POST['status'];
+
+            $images = array();
+
+            for ($i = 0; isset($_FILES['image']['tmp_name'][$i]); $i++) {
+                if (is_uploaded_file($_FILES['image']['tmp_name'][$i])) {
+                    if (move_uploaded_file($_FILES['image']['tmp_name'][$i], $_SERVER['DOCUMENT_ROOT'] . '/upload/products/' . $_FILES['image']['name'][$i]))
+                        $images[$i] = '/upload/products/' . $_FILES['image']['name'][$i];
+                    else
+                        $errors[] = 'Ошибка при загрузке файла' . $i + 1;
+                } else {
+                    $images[$i] = $imagesPaths[$i];
+                }
+            }
+            $options['image_path'] = json_encode($images);
+
+            if (!isset($options['name']) || empty($options['name']))
+                $errors[] = 'Введите название продукта!';
+            if (!$errors) {
+                Product::updateProduct($options, $id);
+                header('Location:/admin/product');
+            }
+        }
+        require_once(ROOT . '/views/admin_product/update.php');
+        return true;
+    }
+
+    public function actionDelete($id)
+    {
+        self::checkAdmin();
+        if (isset($_POST['submit'])) {
+            Product::deleteProduct($id);
+            header('Location:/admin/product');
+        }
+
+        require_once(ROOT . '/views/admin_product/delete.php');
+        return true;
+    }
+
+}

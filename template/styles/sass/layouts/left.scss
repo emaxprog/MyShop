@@ -1,0 +1,144 @@
+@import "../templates";
+.menu-products {
+  margin: 20px 0;
+  ul {
+    @extend %ul-clear;
+    li {
+      position: relative;
+      &:hover .sub-menu{
+        display: block;
+      }
+      a{
+        text-decoration: none;
+        display: block;
+        border: 1px solid $AQUA_COLOR;
+        padding: 20px;
+        color: $DARK_GREY_COLOR;
+        margin-bottom: -1px;
+        &:hover{
+          background: $DARK_GREY_COLOR;
+          color: #ffffff;
+        }
+      }
+      .sub-menu{
+        position: absolute;
+        display: none;
+        left: 238px;
+        z-index: 10;
+        background: #ffffff;
+        top:0;
+        border-left: 2px solid $AQUA_COLOR;
+        a{
+          width: 210px;
+        }
+      }
+    }
+  }
+}
+
+.menu-select{
+  margin: 20px 0;
+  border: 1px solid $AQUA_COLOR;
+  #form-selection{
+    display: flex;
+    flex-direction: column;
+  }
+  .range-price{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 20px;
+    .price-input{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+      input[type=text]{
+        width: 80px;
+        height: 30px;
+        font-size: 18px;
+      }
+    }
+  }
+  .brand {
+    border-top: 1px solid $AQUA_COLOR;
+    padding: 20px;
+    .brand-list {
+      padding: 5px;
+      font-size: 18px;
+      display: flex;
+      flex-flow: column nowrap;
+      height: 200px;
+      overflow: auto;
+      margin: 10px 0;
+      border: 1px solid $AQUA_COLOR;
+      .brand-row{
+        margin: 5px 0;
+      }
+    }
+  }
+  #btn-selection{
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    background: $AQUA_COLOR;
+    color: #FFFFFF;
+    margin: 0 20px 20px 20px;
+  }
+
+  .checkbox + label {
+    cursor: pointer;
+  }
+
+  .checkbox:not(checked) {
+    position: absolute;
+    opacity: 0;
+  }
+  .checkbox:not(checked) + label {
+    position: relative;
+    padding: 0 0 0 60px;
+  }
+
+  .checkbox:not(checked) + label:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 50px;
+    height: 26px;
+    border-radius: 13px;
+    background: #CDD1DA;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+  }
+  .checkbox:not(checked) + label:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: all .2s;
+  }
+  .checkbox:checked + label:before {
+    background: $AQUA_COLOR;
+  }
+  .checkbox:checked + label:after {
+    left: 26px;
+  }
+  //.checkbox:focus + label:before {
+  //  box-shadow: 0 0 0 3px rgba(0, 162, 232, 0.5);
+  //}
+}
+
+#slider-range{
+  .ui-state-active:hover{
+    background: $AQUA_COLOR;
+  }
+}
+
+#hover-item{
+background: $DARK_GREY_COLOR;
+  color: #ffffff;
+}

@@ -1,0 +1,132 @@
+@import "../templates";
+
+/*Афиша*/
+.center > .afisha {
+  margin-top: 20px;
+}
+
+.center > .afisha > img {
+  width: 740px;
+}
+
+/*Блоки товаров*/
+
+.blocks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  border: 1px solid $LIGHT_GREY_COLOR;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  position: relative;
+  width: 250px;
+  height: 370px;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.7s;
+  }
+
+  .img-product {
+    text-align: center;
+    & > img {
+      max-width: 250px;
+      max-height: 150px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  .about-product {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    ul {
+      @extend %ul-clear;
+      text-align: center;
+
+      li {
+        margin-bottom: 10px;
+        &:first-child {
+          margin-top: 20px;
+          font-size: 18px;
+        }
+        &.old-price {
+          text-decoration: line-through;
+        }
+        &:last-child {
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .button-add-basket {
+    a {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-decoration: none;
+      padding: 10px;
+      background: $AQUA_COLOR;
+      text-align: center;
+      color: #ffffff;
+      &:hover {
+        background: $DARK_GREY_COLOR;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.latest-products, .recomended-products {
+  h1 {
+    font-weight: normal;
+  }
+}
+
+.new, .sale {
+  position: absolute;
+  margin: 10px;
+  top: 0;
+  right: 0;
+}
+
+/*Pagination*/
+
+div.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+ul.pagination {
+  @extend %ul-clear;
+  display: flex;
+  li {
+    margin: 5px;
+  }
+  li.active a {
+    background: $DARK_GREY_COLOR;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    background: $AQUA_COLOR;
+    margin: 20px 0;
+    &:hover {
+      background: $DARK_GREY_COLOR;
+    }
+  }
+}
