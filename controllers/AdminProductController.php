@@ -119,7 +119,7 @@ class AdminProductController extends AdminBase
                 header('Location:/admin/product');
             }
         }
-        require_once(ROOT . '/views/admin_product/index.php');
+        require_once(ROOT . '/views/admin_product/update.php');
         return true;
     }
 

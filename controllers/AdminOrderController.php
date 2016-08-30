@@ -47,7 +47,7 @@ class AdminOrderController extends AdminBase
             Order::updateOrder($id,$userName,$userPhone,$userComment,$date,$status);
         }
 
-        require_once (ROOT.'/views/admin_order/index.php');
+        require_once (ROOT.'/views/admin_order/update.php');
         return true;
     }
 

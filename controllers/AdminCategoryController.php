@@ -62,7 +62,7 @@ class AdminCategoryController extends AdminBase
             header("Location: /admin/category");
         }
 
-        require_once(ROOT . '/views/admin_category/index.php');
+        require_once(ROOT . '/views/admin_category/update.php');
         return true;
     }
 
