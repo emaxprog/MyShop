@@ -12,15 +12,6 @@
             <img class="slides-img" data-u="image" src="<?=$image?>" />
         </div>
         <?php endforeach;?>
-<!--        <div data-p="112.50" style="display: none;">-->
-<!--            <img data-u="image" src="template/images/content/Afisha/2011-08-05notebooks-study.jpg" />-->
-<!--        </div>-->
-<!--        <div data-p="112.50" style="display: none;">-->
-<!--            <img data-u="image" src="template/images/content/Afisha/Acer_promo.jpg" />-->
-<!--        </div>-->
-<!--        <div data-p="112.50" style="display: none;">-->
-<!--            <img data-u="image" src="template/images/content/Afisha/нотик-купон-50-скидки.png" />-->
-<!--        </div>-->
 
     </div>
     <!-- Bullet Navigator -->

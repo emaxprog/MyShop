@@ -46,6 +46,7 @@ class User
 
     public static function registration($name, $email, $password)
     {
+        $password=md5($password);
         $db = DB::getConnection();
         $sql = "INSERT INTO users (name,email,password) VALUES (:name,:email,:password)";
         $result = $db->prepare($sql);
@@ -57,6 +58,7 @@ class User
 
     public static function checkUserData($email, $password)
     {
+        $password=md5($password);
         $db = DB::getConnection();
         $sql = "SELECT id FROM users WHERE email=:email AND password=:password";
         $result = $db->prepare($sql);

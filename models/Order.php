@@ -17,14 +17,12 @@ VALUES (:userName,:userPhone,:userComment,:userId,:products)";
         return $result->execute();
     }
 
-    public static function updateOrder($id,$userName,$userPhone,$userComment,$date,$status)
+    public static function updateOrder($id,$userName,$userPhone,$status)
     {
         $db = DB::getConnection();
         $sql = "UPDATE orders SET 
 user_name=:user_name,
 user_phone=:user_phone,
-user_comment=:user_comment,
-date=:date,
 status=:status
 WHERE id=:id
 ";
@@ -32,8 +30,6 @@ WHERE id=:id
         $result->bindParam(':id',$id,PDO::PARAM_INT);
         $result->bindParam(':userName', $userName, PDO::PARAM_STR);
         $result->bindParam(':userPhone', $userPhone, PDO::PARAM_STR);
-        $result->bindParam(':userComment', $userComment, PDO::PARAM_STR);
-        $result->bindParam(':date', $date, PDO::PARAM_STR);
         $result->bindParam(':status', $status, PDO::PARAM_INT);
         return $result->execute();
     }
@@ -45,14 +41,18 @@ WHERE id=:id
         $result = $db->prepare($sql);
         $result->execute();
         $orders = array();
-        for ($i = 0; $row = $result->fetch(); $i++) {
-            $orders[$i]['id'] = $row['id'];
-            $orders[$i]['user_name'] = $row['user_name'];
-            $orders[$i]['user_phone'] = $row['user_phone'];
-            $orders[$i]['date'] = $row['date'];
-            $orders[$i]['status'] = $row['status'];
-        }
+        $orders=self::getAssocArray($result);
         return $orders;
+    }
+
+    private static function getAssocArray($result)
+    {
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        $arr = array();
+       while ($row=$result->fetch()) {
+            $arr[] = $row;
+        }
+        return $arr;
     }
 
     public static function getOrderById($id)

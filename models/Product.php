@@ -72,10 +72,17 @@ AND price>=:minPrice AND price<=:maxPrice AND brand=:brand";
     {
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $arr = array();
-        for ($i = 0; $row = $result->fetch(); $i++) {
+        while ($row = $result->fetch()) {
             $arr[] = $row;
         }
         return $arr;
+    }
+
+    public static function checkNumeral($num)
+    {
+        if(preg_match('~[0-9]+~',$num))
+            return true;
+        return false;
     }
 
     public static function getProductsInRange($categoryId, $page = 1, $min = 10000, $max = 300000)

@@ -22,7 +22,7 @@
                             <label>Стоимость, Руб.</label><br>
                             <input type="text" name="price" placeholder="" value="<?php echo $product['price']; ?>"><br>
 
-                            <label>Старая стоимость, Руб.</label><br>
+                            <label>Стоимость со скидкой, Руб.</label><br>
                             <input type="text" name="old_price" placeholder=""
                                    value="<?php echo $product['old_price']; ?>"><br>
 
@@ -46,6 +46,8 @@
                                 <input type="file" name="image[]" placeholder=""><input name="delete-img-<?=$i?>" id="delete-img-<?=$i?>" value="<?=null?>" type="checkbox"><label for="delete-img-<?=$i?>">Удалить</label><br>
                             <?php endfor; ?>
                             <br>
+                            <label>Детальное описание</label><br>
+                            <textarea name="description"></textarea><br>
 
                             <label>Наличие на складе</label><br>
                             <select name="availability">

@@ -12,12 +12,6 @@
                         <label>Телефон клиента</label><br>
                         <input type="text" name="userPhone" placeholder="" value="<?php echo $order['user_phone']; ?>"><br>
 
-                        <label>Комментарий клиента</label><br>
-                        <input type="text" name="userComment" placeholder="" value="<?php echo $order['user_comment']; ?>"><br>
-
-                        <label>Дата оформления заказа</label><br>
-                        <input type="text" name="date" placeholder="" value="<?php echo $order['date']; ?>"><br>
-
                         <label>Статус</label><br>
                         <select name="status">
                             <option value="1" <?php if ($order['status'] == 1) echo ' selected="selected"'; ?>>Новый заказ</option>

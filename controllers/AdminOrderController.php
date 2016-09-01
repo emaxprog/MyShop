@@ -40,11 +40,9 @@ class AdminOrderController extends AdminBase
         if(isset($_POST['submit'])){
             $userName=$_POST['userName'];
             $userPhone=$_POST['userPhone'];
-            $userComment=$_POST['userComment'];
-            $date=$_POST['date'];
             $status=$_POST['status'];
 
-            Order::updateOrder($id,$userName,$userPhone,$userComment,$date,$status);
+            Order::updateOrder($id,$userName,$userPhone,$status);
         }
 
         require_once (ROOT.'/views/admin_order/update.php');

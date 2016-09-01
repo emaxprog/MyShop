@@ -38,6 +38,11 @@ class AdminProductController extends AdminBase
             $options['is_recommended'] = $_POST['is_recommended'];
             $options['status'] = $_POST['status'];
 
+            if (isset($_POST['old_price']))
+                $options['old_price'] = $_POST['old_price'];
+            else
+                $options['old_price'] = null;
+
             $images = array();
 
             for ($i = 0; $i < 5; $i++) {
@@ -56,8 +61,11 @@ class AdminProductController extends AdminBase
 
             if (!isset($options['name']) || empty($options['name']))
                 $errors[] = 'Введите название продукта!';
+            if (!Product::checkNumeral($options['code']))
+                $errors[] = 'Некорректный артикул';
+            if (!Product::checkNumeral($options['price']))
+                $errors[] = 'Некорректная стоимость';
             if (!$errors) {
-
                 Product::createProduct($options);
                 header('Location:/admin/product');
             }
@@ -93,6 +101,11 @@ class AdminProductController extends AdminBase
             $options['is_recommended'] = $_POST['is_recommended'];
             $options['status'] = $_POST['status'];
 
+            if (isset($_POST['old_price']))
+                $options['old_price'] = $_POST['old_price'];
+            else
+                $options['old_price'] = null;
+
             $images = array();
 
             for ($i = 0; $i < 5; $i++) {
@@ -114,6 +127,10 @@ class AdminProductController extends AdminBase
 
             if (!isset($options['name']) || empty($options['name']))
                 $errors[] = 'Введите название продукта!';
+            if (!Product::checkNumeral($options['code']))
+                $errors[] = 'Некорректный артикул';
+            if (!Product::checkNumeral($options['price']))
+                $errors[] = 'Некорректная стоимость';
             if (!$errors) {
                 Product::updateProduct($options, $id);
                 header('Location:/admin/product');
