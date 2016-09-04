@@ -17,12 +17,12 @@
                     </tr>
                     <?php foreach ($products as $product): ?>
                         <tr>
-                            <td><?php echo $product['id']; ?></td>
+                            <td><?php echo $product['product_id']; ?></td>
                             <td><?php echo $product['code']; ?></td>
                             <td><?php echo $product['name']; ?></td>
                             <td><?php echo $product['price']; ?></td>
-                            <td><a href="/admin/product/update/<?php echo $product['id']; ?>" title="Редактировать"><i class="fa fa-edit fa-lg"></i></a></td>
-                            <td><a href="/admin/product/delete/<?php echo $product['id']; ?>" title="Удалить"><i class="fa fa-trash-o fa-lg"></i></a></td>
+                            <td><a href="/admin/product/update/<?php echo $product['product_id']; ?>" title="Редактировать"><i class="fa fa-edit fa-lg"></i></a></td>
+                            <td><a href="/admin/product/delete/<?php echo $product['product_id']; ?>" title="Удалить"><i class="fa fa-trash-o fa-lg"></i></a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

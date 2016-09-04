@@ -9,6 +9,13 @@ class User
         return false;
     }
 
+    public static function checkSurname($surname)
+    {
+        if (strlen($surname) >= 1)
+            return true;
+        return false;
+    }
+
     public static function checkEmail($name)
     {
         if (filter_var($name, FILTER_VALIDATE_EMAIL))
@@ -31,6 +38,12 @@ class User
         return false;
     }
 
+    public static function checkAddress($address)
+    {
+        if (strlen($address) > 10)
+            return true;
+        return false;
+    }
 
     public static function checkEmailExists($email)
     {
@@ -44,23 +57,37 @@ class User
         return false;
     }
 
-    public static function registration($name, $email, $password)
+    public static function registration($email, $password, $name, $surname, $address)
     {
-        $password=md5($password);
+        $password = md5($password);
         $db = DB::getConnection();
-        $sql = "INSERT INTO users (name,email,password) VALUES (:name,:email,:password)";
+        $sql = "INSERT INTO customers (email,password,name,surname,address) VALUES (:email,:password,:name,:surname,:address)";
         $result = $db->prepare($sql);
-        $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
+        $result->bindParam(':name', $name, PDO::PARAM_STR);
+        $result->bindParam(':surname', $surname, PDO::PARAM_STR);
+        $result->bindParam(':address', $address, PDO::PARAM_STR);
         return $result->execute();
     }
 
     public static function checkUserData($email, $password)
     {
-        $password=md5($password);
+        $password = md5($password);
         $db = DB::getConnection();
-        $sql = "SELECT id FROM users WHERE email=:email AND password=:password";
+        $sql = "SELECT customer_id FROM customers WHERE email=:email AND password=:password";
+        $result = $db->prepare($sql);
+        $result->bindParam(':email', $email, PDO::PARAM_STR);
+        $result->bindParam(':password', $password, PDO::PARAM_STR);
+        $result->execute();
+        return $result->fetchColumn();
+    }
+
+    public static function checkAdminData($email, $password)
+    {
+        $password = md5($password);
+        $db = DB::getConnection();
+        $sql = "SELECT admin_id FROM admins WHERE email=:email AND password=:password";
         $result = $db->prepare($sql);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
@@ -84,6 +111,18 @@ class User
         $_SESSION['user'] = $userId;
     }
 
+    public static function authAdmin($adminId)
+    {
+        $_SESSION['admin'] = $adminId;
+    }
+
+    public static function checkLoggedAdmin()
+    {
+        if (isset($_SESSION['admin']))
+            return $_SESSION['admin'];
+        return false;
+    }
+
     public static function checkLogged()
     {
         if (isset($_SESSION['user']))
@@ -91,10 +130,20 @@ class User
         return false;
     }
 
-    public static function getUserById($id)
+    public static function getCustomerById($id)
     {
         $db = DB::getConnection();
-        $sql = "SELECT * FROM users WHERE id=:id";
+        $sql = "SELECT * FROM customers WHERE customer_id=:id";
+        $result = $db->prepare($sql);
+        $result->bindParam(':id', $id, PDO::PARAM_INT);
+        $result->execute();
+        return $result->fetch();
+    }
+
+    public static function getAdminById($id)
+    {
+        $db = DB::getConnection();
+        $sql = "SELECT * FROM admins WHERE admin_id=:id";
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->execute();
@@ -105,22 +154,22 @@ class User
     {
         if (isset($_SESSION['user']))
             unset($_SESSION['user']);
+        if (isset($_SESSION['admin']))
+            unset($_SESSION['admin']);
     }
 
     public static function isGuest()
     {
-        if (isset($_SESSION['user']))
+        if (isset($_SESSION['user']) || isset($_SESSION['admin']))
             return false;
         return true;
     }
 
     public static function isAdmin()
     {
-        $userId = self::checkLogged();
+        $adminId = self::checkLoggedAdmin();
 
-        $user = self::getUserById($userId);
-
-        if ($user['role'] == 'admin')
+        if ($adminId)
             return true;
         return false;
     }

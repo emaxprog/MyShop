@@ -39,7 +39,7 @@ class Cart
         $productsInCart = self::getProducts();
         if ($productsInCart)
             foreach ($products as $product)
-                $totalPrice += $product['price'] * $productsInCart[$product['id']];
+                $totalPrice += $product['price'] * $productsInCart[$product['product_id']];
         return $totalPrice;
     }
 

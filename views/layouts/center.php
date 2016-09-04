@@ -10,7 +10,7 @@
                     <?php if ($product['is_new']): ?>
                         <img src="/template/images/content/Products/new.png" class="new">
                     <?php endif; ?>
-                    <a href="/product/<?= $product['id'];?>">
+                    <a href="/product/<?= $product['product_id'];?>">
                     <div class="img-product">
                         <img src="<?=Product::getMainImage($product['image_path'])?>" alt="Apple MacBook"
                              title="Apple MacBook">
@@ -23,7 +23,7 @@
                     </div>
                     </a>
                     <div class="button-add-basket">
-                        <a href="#" data-id="<?= $product['id'];?>" class="btn-add-to-cart"><i class="fa fa-shopping-cart fa-2x"></i>Добавить в корзину</a>
+                        <a href="#" data-id="<?= $product['product_id'];?>" class="btn-add-to-cart"><i class="fa fa-shopping-cart fa-2x"></i>Добавить в корзину</a>
                     </div>
                 </div>
             <?php endforeach; ?>
@@ -37,7 +37,7 @@
                     <?php if ($product['is_new']): ?>
                         <img src="/template/images/content/Products/new.png" class="new">
                     <?php endif; ?>
-                    <a href="/product/<?= $product['id'];?>">
+                    <a href="/product/<?= $product['product_id'];?>">
                     <div class="img-product">
                         <img src="<?=Product::getMainImage($product['image_path'])?>" alt="Apple MacBook"
                              title="Apple MacBook">
@@ -53,7 +53,7 @@
                     </div>
                     </a>
                     <div class="button-add-basket">
-                        <a href="#" data-id="<?= $product['id'];?>" class="btn-add-to-cart"><i class="fa fa-shopping-cart fa-2x"></i>Добавить в корзину</a>
+                        <a href="#" data-id="<?= $product['product_id'];?>" class="btn-add-to-cart"><i class="fa fa-shopping-cart fa-2x"></i>Добавить в корзину</a>
                     </div>
                 </div>
             <?php endforeach; ?>

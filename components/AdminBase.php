@@ -4,11 +4,11 @@ abstract class AdminBase
 {
     public static function checkAdmin()
     {
-        $userId = User::checkLogged();
+        $adminId = User::checkLoggedAdmin();
 
-        $user = User::getUserById($userId);
+        $admin = User::getAdminById($adminId);
 
-        if ($user['role'] == 'admin')
+        if ($admin)
             return true;
 
         die('Access denied');

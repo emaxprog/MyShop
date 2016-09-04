@@ -8,7 +8,7 @@
                         <ul class="sub-menu">
                             <?php foreach ($category['subcategories'] as $subcategory): ?>
                                 <li>
-                                    <a href="/category/<?=$subcategory['id'];?>/page-1"  data-category="<?=$subcategory['id'];?>"><?= $subcategory['name']; ?></a>
+                                    <a href="/category/<?=$subcategory['category_id'];?>/page-1"  data-category="<?=$subcategory['id'];?>"><?= $subcategory['name']; ?></a>
                                 </li>
                             <?php endforeach; ?>
                         </ul>

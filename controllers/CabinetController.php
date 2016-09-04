@@ -7,9 +7,7 @@ class CabinetController
         $userId = User::checkLogged();
         if (!$userId)
             header('Location:/user/login');
-        if(User::isAdmin())
-            header('Location:/admin');
-        $user = User::getUserById($userId);
+        $user = User::getCustomerById($userId);
 
         require_once(ROOT . '/views/cabinet/index.php');
         return true;
@@ -18,7 +16,7 @@ class CabinetController
     public function actionEdit()
     {
         $userId=User::checkLogged();
-        $user=User::getUserById($userId);
+        $user=User::getCustomerById($userId);
 
         $name=$user['name'];
         $password=$user['password'];

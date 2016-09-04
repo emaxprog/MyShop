@@ -92,11 +92,9 @@ class AdminProductController extends AdminBase
             $options['name'] = $_POST['name'];
             $options['code'] = $_POST['code'];
             $options['price'] = $_POST['price'];
-            $options['old_price'] = $_POST['old_price'];
             $options['category_id'] = $_POST['category_id'];
             $options['brand'] = $_POST['brand'];
             $options['availability'] = $_POST['availability'];
-            $options['description'] = $_POST['description'];
             $options['is_new'] = $_POST['is_new'];
             $options['is_recommended'] = $_POST['is_recommended'];
             $options['status'] = $_POST['status'];
@@ -105,7 +103,10 @@ class AdminProductController extends AdminBase
                 $options['old_price'] = $_POST['old_price'];
             else
                 $options['old_price'] = null;
-
+            if (isset($_POST['description']))
+                $options['description'] = $_POST['description'];
+            else
+                $options['description'] = null;
             $images = array();
 
             for ($i = 0; $i < 5; $i++) {

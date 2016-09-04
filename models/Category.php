@@ -5,13 +5,13 @@ class Category
     public static function getCategories()
     {
         $db = DB::getConnection();
-        $sql = "SELECT id,name,parent_id FROM categories WHERE status=1 AND parent_id=0 ORDER BY sort_order ASC ";
+        $sql = "SELECT category_id,name,parent_id FROM categories WHERE status=1 AND parent_id=0 ORDER BY sort_order ASC ";
         $result = $db->query($sql);
         $result->setFetchMode(PDO::FETCH_ASSOC);
         $categories = array();
         for ($i = 0; $row = $result->fetch(); $i++) {
             $categories[$i] = $row;
-            if (!empty($subcategories = self::getSubcategories($row['id'])))
+            if (!empty($subcategories = self::getSubcategories($row['category_id'])))
                 $categories[$i]['subcategories'] = $subcategories;
         }
         return $categories;
@@ -37,7 +37,7 @@ class Category
     {
         $db = Db::getConnection();
 
-        $sql = 'DELETE FROM categories WHERE id = :id';
+        $sql = 'DELETE FROM categories WHERE category_id = :id';
 
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
@@ -54,7 +54,7 @@ class Category
                 sort_order = :sort_order, 
                 status = :status,
                 parent_id=:parentId
-            WHERE id = :id";
+            WHERE category_id = :id";
 
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
@@ -71,7 +71,7 @@ class Category
     {
         $db = Db::getConnection();
 
-        $sql = 'SELECT * FROM categories WHERE id = :id';
+        $sql = 'SELECT * FROM categories WHERE category_id = :id';
 
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
@@ -86,7 +86,7 @@ class Category
     public static function getParentCategories()
     {
         $db = DB::getConnection();
-        $sql = "SELECT id,name FROM categories WHERE parent_id=0";
+        $sql = "SELECT category_id,name FROM categories WHERE parent_id=0";
         $result = $db->query($sql);
         $categories = self::getAssocArray($result);
         return $categories;
@@ -105,7 +105,7 @@ class Category
     public static function getCategoriesAll()
     {
         $db = DB::getConnection();
-        $sql = "SELECT id,name,sort_order,status,parent_id FROM categories ORDER BY sort_order ASC ";
+        $sql = "SELECT category_id,name,sort_order,status,parent_id FROM categories ORDER BY sort_order ASC ";
         $result = $db->query($sql);
         $categories = self::getAssocArray($result);
         return $categories;
@@ -114,7 +114,7 @@ class Category
     public static function getSubcategories($id)
     {
         $db = DB::getConnection();
-        $sql = "SELECT id,name FROM categories WHERE status=1 AND parent_id=:id ORDER BY sort_order ASC ";
+        $sql = "SELECT category_id,name FROM categories WHERE status=1 AND parent_id=:id ORDER BY sort_order ASC ";
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->execute();
@@ -125,7 +125,7 @@ class Category
     public static function getSubcategoriesAll()
     {
         $db = DB::getConnection();
-        $sql = "SELECT id,name,sort_order,status,parent_id FROM categories WHERE parent_id<>0 ORDER BY sort_order ASC ";
+        $sql = "SELECT category_id,name,sort_order,status,parent_id FROM categories WHERE parent_id<>0 ORDER BY sort_order ASC ";
         $result = $db->query($sql);
         $subcategories = self::getAssocArray($result);
         return $subcategories;
@@ -137,7 +137,7 @@ class Category
         if (!$id)
             return 'Главная категория';
         $db = DB::getConnection();
-        $sql = "SELECT name FROM categories WHERE id=:id";
+        $sql = "SELECT name FROM categories WHERE category_id=:id";
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->execute();

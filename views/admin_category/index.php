@@ -20,14 +20,14 @@
                         </tr>
                         <?php foreach ($categoriesList as $category): ?>
                             <tr>
-                                <td><?php echo $category['id']; ?></td>
+                                <td><?php echo $category['category_id']; ?></td>
                                 <td><?php echo $category['name']; ?></td>
                                 <td><?php echo Category::getCategoryText($category['parent_id']) ?></td>
                                 <td><?php echo $category['sort_order']; ?></td>
                                 <td><?php echo Category::getStatusText($category['status']); ?></td>
-                                <td><a href="/admin/category/update/<?php echo $category['id']; ?>"
+                                <td><a href="/admin/category/update/<?php echo $category['category_id']; ?>"
                                        title="Редактировать"><i class="fa fa-edit fa-lg"></i></a></td>
-                                <td><a href="/admin/category/delete/<?php echo $category['id']; ?>" title="Удалить"><i
+                                <td><a href="/admin/category/delete/<?php echo $category['category_id']; ?>" title="Удалить"><i
                                             class="fa fa-trash-o fa-lg"></i></a></td>
                             </tr>
                         <?php endforeach; ?>

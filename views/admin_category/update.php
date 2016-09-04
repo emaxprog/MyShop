@@ -17,8 +17,8 @@
                                 <option value="0">Главная категория</option>
                                 <?php if (isset($parentCategories)): ?>
                                     <?php foreach ($parentCategories as $parentCategory): ?>
-                                        <option <?php if ($parentCategory['id'] == $category['parent_id']) echo 'selected' ?>
-                                            value="<?= $parentCategory['id'] ?>"><?= $parentCategory['name'] ?>
+                                        <option <?php if ($parentCategory['category_id'] == $category['parent_id']) echo 'selected' ?>
+                                            value="<?= $parentCategory['category_id'] ?>"><?= $parentCategory['name'] ?>
                                         </option>
                                     <?php endforeach; ?>
                                 <?php endif; ?>

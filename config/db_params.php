@@ -2,7 +2,7 @@
 
 return array(
     'host'=>'localhost',
-    'dbname'=>'mysite',
+    'dbname'=>'internet_shop',
     'user'=>'root',
     'password'=>'ghjuhfvvbcn96'
 );

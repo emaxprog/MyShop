@@ -20,7 +20,7 @@
                                 <?php if (isset($parentCategories)): ?>
                                     <?php foreach ($parentCategories as $parentCategory): ?>
                                         <option
-                                            value="<?= $parentCategory['id'] ?>"><?= $parentCategory['name'] ?>
+                                            value="<?= $parentCategory['category_id'] ?>"><?= $parentCategory['name'] ?>
                                         </option>
                                     <?php endforeach; ?>
                                 <?php endif; ?>

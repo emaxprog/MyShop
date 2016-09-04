@@ -18,7 +18,7 @@
                             <li><b>Наличие:</b> <?= Product::getAvailabilityText($product['availability']); ?></li>
                             <li><b>Производитель:</b> <?= $product['brand']; ?></li>
                         </ul>
-                        <a href="#" data-id="<?= $product['id']; ?>" class="btn-add-to-cart"><i
+                        <a href="#" data-id="<?= $product['product_id']; ?>" class="btn-add-to-cart"><i
                                 class="fa fa-shopping-cart fa-2x"></i> Добавить в корзину</a>
                     </section>
                 </div>

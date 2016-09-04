@@ -32,7 +32,7 @@
                         <label>Категория</label><br>
                         <select name="category_id">
                             <?php foreach ($subcategories as $subcategory): ?>
-                                <option value="<?php echo $subcategory['id']; ?>">
+                                <option value="<?php echo $subcategory['category_id']; ?>">
                                     <?php echo $subcategory['name']; ?>
                                 </option>
                             <?php endforeach; ?>

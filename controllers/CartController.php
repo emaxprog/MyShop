@@ -42,7 +42,7 @@ class CartController
 
         if (!User::isGuest()) {
             $userId = User::checkLogged();
-            $user = User::getUserById($userId);
+            $user = User::getCustomerById($userId);
 
             $userName = $user['name'];
         } else

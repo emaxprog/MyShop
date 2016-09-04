@@ -63,10 +63,12 @@
                             <a href="/user/logout"><i class="fa fa-unlock fa-lg"></i> Выйти</a>
                         </li>
                     <?php endif; ?>
-                    <li>
-                        <a href="/cart"><i class="fa fa-shopping-cart fa-lg"></i> Корзина(<span
-                                class="quantity-in-cart"><?= Cart::countQuantity() ?></span>)</a>
-                    </li>
+                    <?php if(!User::isAdmin()):?>
+                        <li>
+                            <a href="/cart"><i class="fa fa-shopping-cart fa-lg"></i> Корзина(<span
+                                    class="quantity-in-cart"><?= Cart::countQuantity() ?></span>)</a>
+                        </li>
+                    <?php endif;?>
                 </ul>
             </div>
         </header>

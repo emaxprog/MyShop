@@ -22,15 +22,14 @@
                             <label>Стоимость, Руб.</label><br>
                             <input type="text" name="price" placeholder="" value="<?php echo $product['price']; ?>"><br>
 
-                            <label>Стоимость со скидкой, Руб.</label><br>
-                            <input type="text" name="old_price" placeholder=""
-                                   value="<?php echo $product['old_price']; ?>"><br>
+                            <label>Предыдущая стоимость, Руб.</label><br>
+                            <input type="text" name="old_price" placeholder="" value="<?php echo $product['old_price']; ?>"><br>
 
                             <label>Категория</label><br>
                             <select name="category_id">
                                 <?php foreach ($subcategories as $subcategory): ?>
-                                    <option value="<?php echo $subcategory['id']; ?>"
-                                        <?php if ($product['category_id'] == $subcategory['id']) echo ' selected="selected"'; ?>>
+                                    <option value="<?php echo $subcategory['category_id']; ?>"
+                                        <?php if ($product['category_id'] == $subcategory['category_id']) echo ' selected="selected"'; ?>>
                                         <?php echo $subcategory['name']; ?>
                                     </option>
                                 <?php endforeach; ?>
@@ -47,7 +46,7 @@
                             <?php endfor; ?>
                             <br>
                             <label>Детальное описание</label><br>
-                            <textarea name="description"></textarea><br>
+                            <textarea name="description"><?php echo $product['description']; ?></textarea><br>
 
                             <label>Наличие на складе</label><br>
                             <select name="availability">

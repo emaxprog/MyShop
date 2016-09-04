@@ -31,8 +31,8 @@
                                         <td><?= $product['code']; ?></td>
                                         <td><?= $product['name']; ?></td>
                                         <td><?= $product['price']; ?></td>
-                                        <td><?= $productsInCart[$product['id']]; ?></td>
-                                        <td><a href="/cart/delete/<?= $product['id']; ?>"><i class="fa fa-trash-o fa-lg"></i></a>
+                                        <td><?= $productsInCart[$product['product_id']]; ?></td>
+                                        <td><a href="/cart/delete/<?= $product['product_id']; ?>"><i class="fa fa-trash-o fa-lg"></i></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
