@@ -10,7 +10,7 @@
             <?php include ROOT . "/views/layouts/left.php" ?>
             <div class="center">
                 <div class="registration">
-                    <?php if ($result): ?>
+                    <?php if ($customerId): ?>
                         <span>Вы зарегистрированы!</span>
                     <?php else: ?>
                         <?php if ($errors): ?>
@@ -34,9 +34,11 @@
                                 <label for="surname">Фамилия:</label><br>
                                 <input type="text" name="surname" id="surname" placeholder="Введите фамилию"
                                        value="<?= $surname; ?>"><br>
+                                <label for="phone">Телефон:</label><br>
+                                <input type="text" name="phone" id="phone" placeholder="Введите телефон"
+                                       value="<?= $phone; ?>"><br>
                                 <label for="address">Адрес:</label><br>
-                                <textarea type="text" name="address" id="address" placeholder="Введите адрес"
-                                       value="<?= $address; ?>"></textarea> <br>
+                                <textarea type="text" name="address" id="address" placeholder="Введите адрес"><?= $address; ?></textarea> <br>
                                 <input type="submit" name="submit" class="btn btn-reg" value="Регистрация"><br>
                             </form>
                         </div>

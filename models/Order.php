@@ -19,21 +19,6 @@ class Order
         }
     }
 
-//    public static function save($userName, $userPhone, $userComment, $userId, $products)
-//    {
-//        $products = json_encode($products);
-//        $db = DB::getConnection();
-//        $sql = "INSERT INTO orders (user_name,user_phone,user_comment,user_id,products)
-//VALUES (:userName,:userPhone,:userComment,:userId,:products)";
-//        $result = $db->prepare($sql);
-//        $result->bindParam(':userName', $userName, PDO::PARAM_STR);
-//        $result->bindParam(':userPhone', $userPhone, PDO::PARAM_STR);
-//        $result->bindParam(':userComment', $userComment, PDO::PARAM_STR);
-//        $result->bindParam(':userId', $userId, PDO::PARAM_INT);
-//        $result->bindParam(':products', $products, PDO::PARAM_STR);
-//        return $result->execute();
-//    }
-
 
     public static function saveOrder($customerId)
     {
@@ -76,12 +61,49 @@ WHERE id=:id
     public static function getOrders()
     {
         $db = DB::getConnection();
-        $sql = "SELECT order_id,date,status FROM orders ORDER BY id DESC ";
+        $sql = "SELECT order_id,name,phone,date,status FROM orders INNER JOIN customers 
+ON (orders.customer_id=customers.customer_id) ORDER BY order_id DESC ";
         $result = $db->prepare($sql);
         $result->execute();
         $orders = array();
         $orders = self::getAssocArray($result);
         return $orders;
+    }
+
+    public static function getProductsIdsByOrder($orderId)
+    {
+        $db = DB::getConnection();
+        $sql = "SELECT product_id FROM order_product WHERE order_id=:orderId GROUP BY product_id";
+        $result = $db->prepare($sql);
+        $result->bindParam(':orderId', $orderId, PDO::PARAM_INT);
+        $result->execute();
+        $productsIds = array();
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+        while ($row = $result->fetch())
+            $productsIds[] = $row['product_id'];
+        return $productsIds;
+    }
+
+    public static function getQuantityProduct($productId, $orderId)
+    {
+        $db = DB::getConnection();
+        $sql = "SELECT COUNT(product_id) FROM order_product WHERE product_id=:productId AND order_id=:orderId";
+        $result = $db->prepare($sql);
+        $result->bindParam(':productId', $productId, PDO::PARAM_INT);
+        $result->bindParam(':orderId', $orderId, PDO::PARAM_INT);
+        $result->execute();
+        return $result->fetchColumn();
+    }
+
+    public static function getQuantityProducts($orderId)
+    {
+        $productsIds = self::getProductsIdsByOrder($orderId);
+        $productsQuantity = array();
+        foreach ($productsIds as $productsId) {
+            $productsId = intval($productsId);
+            $productsQuantity[$productsId] = self::getQuantityProduct($productsId, $orderId);
+        }
+        return $productsQuantity;
     }
 
     private static function getAssocArray($result)
@@ -97,7 +119,8 @@ WHERE id=:id
     public static function getOrderById($id)
     {
         $db = DB::getConnection();
-        $sql = "SELECT * FROM orders WHERE id=:id";
+        $sql = "SELECT order_id,name,phone,status,date FROM orders INNER JOIN customers 
+ON (orders.customer_id=customers.customer_id) WHERE order_id=:id";
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         $result->execute();
@@ -122,10 +145,10 @@ WHERE id=:id
             case '2':
                 return 'В обработке';
                 break;
-            case '1':
+            case '3':
                 return 'Доставляется';
                 break;
-            case '1':
+            case '4':
                 return 'Доставлено';
                 break;
         }

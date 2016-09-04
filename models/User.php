@@ -33,7 +33,7 @@ class User
 
     public static function checkPhone($phone)
     {
-        if (strlen($phone) == 11)
+        if (strlen($phone) == 11 && preg_match('~[0-9]+~', $phone))
             return true;
         return false;
     }
@@ -57,18 +57,21 @@ class User
         return false;
     }
 
-    public static function registration($email, $password, $name, $surname, $address)
+    public static function registration($email, $password, $name, $surname, $phone, $address)
     {
         $password = md5($password);
         $db = DB::getConnection();
-        $sql = "INSERT INTO customers (email,password,name,surname,address) VALUES (:email,:password,:name,:surname,:address)";
+        $sql = "INSERT INTO customers (email,password,name,surname,phone,address) VALUES (:email,:password,:name,:surname,:phone,:address)";
         $result = $db->prepare($sql);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':surname', $surname, PDO::PARAM_STR);
+        $result->bindParam(':phone', $phone, PDO::PARAM_INT);
         $result->bindParam(':address', $address, PDO::PARAM_STR);
-        return $result->execute();
+        if ($result->execute())
+            return $db->lastInsertId();
+        return false;
     }
 
     public static function checkUserData($email, $password)

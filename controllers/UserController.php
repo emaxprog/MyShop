@@ -5,7 +5,7 @@ class UserController
     public function actionRegistration()
     {
         $categories = Category::getCategories();
-        $email = $password = $name = $surname = $address = '';
+        $email = $password = $name = $surname = $address = $phone = '';
         $result = $errors = false;
 
         if (isset($_POST['submit'])) {
@@ -14,6 +14,7 @@ class UserController
             $name = $_POST['name'];
             $surname = $_POST['surname'];
             $address = $_POST['address'];
+            $phone = $_POST['phone'];
 
             if (!User::checkEmail($email))
                 $errors[] = 'Некорректный Email';
@@ -23,12 +24,16 @@ class UserController
                 $errors[] = 'Данный Email уже существует';
             if (!User::checkName($name))
                 $errors[] = 'Имя не может быть менее 2-х символов';
-            if (!User::checkSurName($surname))
+            if (!User::checkSurname($surname))
                 $errors[] = 'Фамилия не может быть менее 1-го символов';
             if (!User::checkAddress($address))
                 $errors[] = 'Введите полный адрес';
-            if (!$errors)
-                $result = User::registration($email, $password, $name, $surname, $address);
+            if (!User::checkPhone($phone))
+                $errors[] = 'Некорректный телефон';
+            if (!$errors){
+                $customerId = User::registration($email, $password, $name, $surname, $phone, $address);
+                User::auth($customerId);
+            }
         }
 
         require_once(ROOT . '/views/user/registration.php');

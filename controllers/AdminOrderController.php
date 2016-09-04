@@ -22,7 +22,7 @@ class AdminOrderController extends AdminBase
         self::checkAdmin();
 
         $order = Order::getOrderById($id);
-        $productsQuantity = json_decode($order['products'], true);
+        $productsQuantity = Order::getQuantityProducts($id);
         $productsIds = array_keys($productsQuantity);
         $products = Product::getProductsByIds($productsIds);
 

@@ -20,14 +20,9 @@
                             </ul>
                         </div>
                         <div class="checkout">
-                            <p>Вы можете оставить свой комментарий к заказу. Наш менеджер свяжется с Вами.</p>
+                            <p>Вы действительно хотите оформить данный заказ?</p>
                             <div class="form">
                                 <form name="checkout-form" action="#" method="post">
-
-                                    <label for="userComment">Комментарий к заказу</label><br>
-                                    <textarea name="userComment" id="userComment" placeholder="Сообщение"
-                                           value="<?php echo $userComment; ?>"></textarea> <br>
-
                                     <input type="submit" name="submit" class="btn-checkout" value="Оформить"/><br>
                                 </form>
                             </div>

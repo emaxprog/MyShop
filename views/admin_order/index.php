@@ -17,16 +17,16 @@
                         </tr>
                         <?php foreach ($orders as $order): ?>
                             <tr>
-                                <td><?= $order['id']; ?></td>
-                                <td><?= $order['user_name']; ?></td>
-                                <td><?= $order['user_phone']; ?></td>
+                                <td><?= $order['order_id']; ?></td>
+                                <td><?= $order['name']; ?></td>
+                                <td><?= $order['phone']; ?></td>
                                 <td><?= $order['date']; ?></td>
                                 <td><?= Order::getStatusText($order['status']); ?></td>
-                                <td><a href="/admin/order/view/<?= $order['id']; ?>" title="Смотреть"><i
+                                <td><a href="/admin/order/view/<?= $order['order_id']; ?>" title="Смотреть"><i
                                             class="fa fa-eye fa-lg"></i></a></td>
-                                <td><a href="/admin/order/update/<?= $order['id']; ?>" title="Редактировать"><i
+                                <td><a href="/admin/order/update/<?= $order['order_id']; ?>" title="Редактировать"><i
                                             class="fa fa-edit fa-lg"></i></a></td>
-                                <td><a href="/admin/order/delete/<?= $order['id']; ?>" title="Удалить"><i
+                                <td><a href="/admin/order/delete/<?= $order['order_id']; ?>" title="Удалить"><i
                                             class="fa fa-trash-o fa-lg"></i></a></td>
                             </tr>
                         <?php endforeach; ?>

@@ -32,7 +32,6 @@ class CartController
         if (!$productsInCart)
             header('Location:/');
         $result = false;
-
         $productsIds = array_keys($productsInCart);
         $products = Product::getProductsByIds($productsIds);
 
