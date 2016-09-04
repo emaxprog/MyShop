@@ -19,27 +19,10 @@
                                 <li>Общая стоимость: <?= $totalPrice ?> руб.</li>
                             </ul>
                         </div>
-                        <?php if ($errors): ?>
-                            <div class="errors">
-                                <ul>
-                                    <?php foreach ($errors as $error): ?>
-                                        <li>-<?= $error ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
-                        <?php endif; ?>
                         <div class="checkout">
-                            <p>Для оформления заказа заполните форму. Наш менеджер свяжется с Вами.</p>
+                            <p>Вы можете оставить свой комментарий к заказу. Наш менеджер свяжется с Вами.</p>
                             <div class="form">
                                 <form name="checkout-form" action="#" method="post">
-
-                                    <label for="userName">Ваше имя</label><br>
-                                    <input type="text" name="userName" id="userName" placeholder=""
-                                           value="<?php echo $userName; ?>"/><br>
-
-                                    <label for="userPhone">Номер телефона</label><br>
-                                    <input type="text" name="userPhone" id="userPhone" placeholder=""
-                                           value="<?php echo $userPhone; ?>"/><br>
 
                                     <label for="userComment">Комментарий к заказу</label><br>
                                     <textarea name="userComment" id="userComment" placeholder="Сообщение"

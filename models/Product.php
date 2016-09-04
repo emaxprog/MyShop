@@ -2,7 +2,7 @@
 
 class Product
 {
-    const SHOW_BY_DEFAULT = 3;
+    const SHOW_BY_DEFAULT = 6;
 
     public static function getProductById($id)
     {
@@ -94,7 +94,7 @@ AND price>=:minPrice AND price<=:maxPrice AND brand=:brand";
         $sql = "SELECT product_id,name,price,old_price,is_new,image_path FROM products WHERE status=1 
 AND category_id=:categoryId 
 AND price>=:minPrice AND price<=:maxPrice
-ORDER BY id ASC LIMIT :limit OFFSET :offset";
+ORDER BY product_id ASC LIMIT :limit OFFSET :offset";
         $result = $db->prepare($sql);
         $result->bindParam(':categoryId', $categoryId, PDO::PARAM_INT);
         $result->bindParam(':limit', $limit, PDO::PARAM_INT);
@@ -264,7 +264,7 @@ BY id ASC LIMIT :limit OFFSET :offset";
     public static function getTotalProductsInSubcategory($categoryId)
     {
         $db = DB::getConnection();
-        $sql = "SELECT COUNT(id) FROM products WHERE status=1 AND category_id=:categoryId";
+        $sql = "SELECT COUNT(product_id) FROM products WHERE status=1 AND category_id=:categoryId";
         $result = $db->prepare($sql);
         $result->bindParam(':categoryId', $categoryId, PDO::PARAM_INT);
         $result->execute();
@@ -274,8 +274,7 @@ BY id ASC LIMIT :limit OFFSET :offset";
     public static function getTotalProductsInRange($categoryId, $min, $max)
     {
         $db = DB::getConnection();
-
-        $sql = "SELECT COUNT(id) FROM products WHERE status=1 AND category_id=:categoryId AND price>=:minPrice AND price<=:maxPrice";
+        $sql = "SELECT COUNT(product_id) FROM products WHERE status=1 AND category_id=:categoryId AND price>=:minPrice AND price<=:maxPrice";
         $result = $db->prepare($sql);
         $result->bindParam(':categoryId', $categoryId, PDO::PARAM_INT);
         $result->bindParam(':minPrice', $min, PDO::PARAM_INT);

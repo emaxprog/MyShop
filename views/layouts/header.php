@@ -25,11 +25,7 @@
     <?php if (!User::isGuest()): ?>
         <div class="header-user">
             <div class="mid">
-                <?php if (User::isAdmin()): ?>
-                    <a href="/admin"><i class="fa fa-sign-in fa-lg"></i> Админпанель</a>
-                <?php else: ?>
-                    <a href="/cabinet"><i class="fa fa-user fa-lg"></i> Личный кабинет</a>
-                <?php endif; ?>
+                <a href="/cabinet"><i class="fa fa-user fa-lg"></i> Личный кабинет</a>
                 <span>Здравствуйте,Александр!</span>
             </div>
         </div>
@@ -63,12 +59,10 @@
                             <a href="/user/logout"><i class="fa fa-unlock fa-lg"></i> Выйти</a>
                         </li>
                     <?php endif; ?>
-                    <?php if(!User::isAdmin()):?>
-                        <li>
-                            <a href="/cart"><i class="fa fa-shopping-cart fa-lg"></i> Корзина(<span
-                                    class="quantity-in-cart"><?= Cart::countQuantity() ?></span>)</a>
-                        </li>
-                    <?php endif;?>
+                    <li>
+                        <a href="/cart"><i class="fa fa-shopping-cart fa-lg"></i> Корзина(<span
+                                class="quantity-in-cart"><?= Cart::countQuantity() ?></span>)</a>
+                    </li>
                 </ul>
             </div>
         </header>

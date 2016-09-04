@@ -31,8 +31,7 @@ class CartController
 
         if (!$productsInCart)
             header('Location:/');
-        $userName = $userPhone = $userComment = '';
-        $errors = $result = false;
+        $result = false;
 
         $productsIds = array_keys($productsInCart);
         $products = Product::getProductsByIds($productsIds);
@@ -41,39 +40,27 @@ class CartController
         $totalPrice = Cart::getTotalPrice($products);
 
         if (!User::isGuest()) {
-            $userId = User::checkLogged();
-            $user = User::getCustomerById($userId);
-
-            $userName = $user['name'];
+            $customerId = User::checkLogged();
+            $customer = User::getCustomerById($customerId);
         } else
-            $userId = false;
+            header('Location:/user/login');
 
         if (isset($_POST['submit'])) {
-            $userName = $_POST['userName'];
-            $userPhone = $_POST['userPhone'];
-            $userComment = $_POST['userComment'];
+            $result = Order::save($customerId,$productsInCart);
+            if ($result) {
+                $adminEmail = 'alexandr@localhost';
+                $subject = 'Тема';
+                $message = 'Заказ';
 
-            if (!User::checkName($userName))
-                $errors[] = 'Имя не может быть менее 2-х символов';
-            if (!User::checkPhone($userPhone))
-                $errors[] = 'Некорректный телефон';
-            if (!$errors) {
-                $result=Order::save($userName,$userPhone,$userComment,$userId,$productsInCart);
-                if($result){
-                    $adminEmail='alexandr@localhost';
-                    $subject='Тема';
-                    $message='Заказ';
+                $headers = "Content-type:text/plain; charset=utf-8";
 
-                    $headers="Content-type:text/plain; charset=utf-8";
+                mail($adminEmail, $subject, $message, $headers);
 
-                    mail($adminEmail,$subject,$message,$headers);
-
-                    Cart::clear();
-                }
+                Cart::clear();
             }
         }
 
-        require_once (ROOT.'/views/cart/checkout.php');
+        require_once(ROOT . '/views/cart/checkout.php');
         return true;
     }
 

@@ -24,6 +24,7 @@ class CatalogController
                 $brands[$brandItem] = $brandItem;
             }
         }
+
         $products = Product::getProductsInRange($categoryId, $page, $minPrice, $maxPrice);
         $totalProducts = Product::getTotalProductsInRange($categoryId, $minPrice, $maxPrice);
         if (isset($brands)) {
@@ -31,7 +32,6 @@ class CatalogController
             $totalProducts = Product::getProductsByBrands($categoryId, $brands, $page, $minPrice, $maxPrice, true);
         }
         $pagination = new Pagination($totalProducts, $page, Product::SHOW_BY_DEFAULT, 'page-');
-
 
         require_once(ROOT . '/views/catalog/category.php');
         return true;

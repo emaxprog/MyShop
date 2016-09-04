@@ -23,7 +23,7 @@
     <div class="header-user">
         <div class="mid">
             <a href="/admin"><i class="fa fa-sign-in fa-lg"></i> Админпанель</a>
-            <a href="/"><i class="fa fa-sign-out fa-lg"></i> На сайт</a>
+            <a href="/user/logout"><i class="fa fa-sign-out fa-lg"></i> На сайт</a>
         </div>
     </div>
     <div class="mid">

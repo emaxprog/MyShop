@@ -13,6 +13,7 @@
                     <h3>Привет, <?php echo $user['name']; ?>!</h3>
                     <ul class="cabinet-menu">
                         <li><a href="/cabinet/edit"><i class="fa fa-edit fa-lg"></i> Редактировать данные</a></li>
+                        <li><a href="/cart"><i class="fa fa-shopping-cart fa-lg"></i> Перейти в корзину</a></li>
                         <!--<li><a href="/cabinet/history">Список покупок</a></li>-->
                     </ul>
                 </div>
