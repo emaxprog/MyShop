@@ -17,6 +17,7 @@
     <script rel="script" type="text/javascript" src="/template/js/tabs.js"></script>
     <script rel="script" type="text/javascript" src="/template/js/addProductToCart.js"></script>
     <script rel="script" type="text/javascript" src="/template/js/feedback.js"></script>
+    <script rel="script" type="text/javascript" src="/template/js/ajaxUploading.js"></script>
 </head>
 <body>
 <div class="wrapper-header">

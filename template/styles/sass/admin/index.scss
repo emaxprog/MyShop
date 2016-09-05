@@ -1,25 +1,40 @@
-.center-admin{
+.center-admin {
   width: 100%;
 }
 
-.admin ,.admin-create,.admin-update,.admin-view,.admin-afisha{
+.admin, .admin-create, .admin-update, .admin-view, .admin-afisha {
   ul.admin-menu {
     @extend %ul-clear;
-    li{
+    li {
       margin: 10px;
     }
-    a{
+    a {
       text-decoration: none;
       color: $AQUA_COLOR;
-      &:hover{
+      &:hover {
         color: $DARK_GREY_COLOR;
       }
     }
   }
+  .btn-more {
+    display: flex;
+    justify-content: center;
+    #btn-more {
+      display: flex;
+      justify-content: space-around;
+      border: none;
+      padding: 10px;
+      color: #FFFFFF;
+      background: $AQUA_COLOR;
+      font-size: 18px;
+      width: 200px;
+      &:hover {
+        background: $DARK_GREY_COLOR;
+      }
+    }
+  }
 
-
-
-  a.btn-add-product,a.btn-add-category{
+  a.btn-add-product, a.btn-add-category {
     text-decoration: none;
     color: white;
     display: flex;
@@ -33,22 +48,22 @@
     }
   }
 
-  a.btn-add-category{
+  a.btn-add-category {
     width: 200px;
   }
 
-  .table-products ,.table-products-orders,.table-orders,.table-categories{
+  .table-products, .table-products-orders, .table-orders, .table-categories {
     @extend %table-admin;
   }
 
-  .table-orders-info{
+  .table-orders-info {
     border-collapse: collapse;
-    td,th{
+    td, th {
       padding: 0 20px;
     }
   }
 
-  input[type=text],select,textarea{
+  input[type=text], select, textarea {
     height: 30px;
     width: 300px;
     border: none;
@@ -58,43 +73,43 @@
       size: 18px;
     }
   }
-  textarea{
+  textarea {
     height: 100px;
   }
 
-  input,select,textarea{
-  margin-bottom: 20px;
+  input, select, textarea {
+    margin-bottom: 20px;
   }
 
-  input[type=submit]{
+  input[type=submit] {
     padding: 10px;
     width: 300px;
     border: none;
     background: $AQUA_COLOR;
     color: #ffffff;
     font-size: 18px;
-    &:hover{
+    &:hover {
       background: $DARK_GREY_COLOR;
     }
   }
 }
 
-.admin-delete,.admin-view{
+.admin-delete, .admin-view {
 
-  input[type=submit],.btn-back{
+  input[type=submit], .btn-back {
     text-decoration: none;
     padding: 10px;
     border: none;
     background: $AQUA_COLOR;
     color: #ffffff;
     font-size: 18px;
-    &:hover{
+    &:hover {
       background: $DARK_GREY_COLOR;
     }
   }
 }
 
-.errors{
+.errors {
   @extend %ul-clear;
   color: #ff0000;
   margin: 5px 20px;

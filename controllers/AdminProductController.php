@@ -18,6 +18,14 @@ class AdminProductController extends AdminBase
         return true;
     }
 
+    public function actionUploading()
+    {
+        $startFrom = $_POST['startFrom'];
+        $products = Product::getProductsAjax($startFrom);
+        echo json_encode($products);
+        return true;
+    }
+
     public function actionCreate()
     {
         self::checkAdmin();

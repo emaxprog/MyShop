@@ -2,8 +2,8 @@
 
 return array(
 
-    'admin/header'=>'adminHeader/index',
-    'admin/afisha'=>'adminAfisha/index',
+    'admin/header' => 'adminHeader/index',
+    'admin/afisha' => 'adminAfisha/index',
     // Управление товарами:
     'admin/product/create' => 'adminProduct/create',
     'admin/product/update/([0-9]+)' => 'adminProduct/update/$1',
@@ -20,25 +20,26 @@ return array(
     'admin/order/view/([0-9]+)' => 'adminOrder/view/$1',
     'admin/order' => 'adminOrder/index',
     // Админпанель:
-    'admin'=>'admin/index',
+    'admin' => 'admin/index',
 
-    'cart/delete/([0-9]+)'=>'cart/delete/$1',
-    'cart/add/([0-9]+)'=>'cart/add/$1',
-    'cart/checkout'=>'cart/checkout',
-    'cart'=>'cart/index',
-    'cabinet/edit'=>'cabinet/edit',
-    'cabinet'=>'cabinet/index',
-    'user/logout'=>'user/logout',
-    'user/login'=>'user/login',
-    'user/registration'=>'user/registration',
-    'product/([0-9]+)'=>'product/view/$1',
-    'category/([0-9]+)/page-([0-9]+)/min-([0-9]+)/max-([0-9]+)'=>'catalog/category/$1/$2/$3/$4',
-    'category/([0-9]+)/page-([0-9]+)'=>'catalog/category/$1/$2',
+    'cart/delete/([0-9]+)' => 'cart/delete/$1',
+    'cart/add/([0-9]+)' => 'cart/add/$1',
+    'cart/checkout' => 'cart/checkout',
+    'cart' => 'cart/index',
+    'cabinet/edit' => 'cabinet/edit',
+    'cabinet' => 'cabinet/index',
+    'user/logout' => 'user/logout',
+    'user/login' => 'user/login',
+    'user/registration' => 'user/registration',
+    'product/([0-9]+)' => 'product/view/$1',
+    'category/([0-9]+)/page-([0-9]+)/min-([0-9]+)/max-([0-9]+)' => 'catalog/category/$1/$2/$3/$4',
+    'category/([0-9]+)/page-([0-9]+)' => 'catalog/category/$1/$2',
 //    'category/([0-9]+)'=>'catalog/category/$1',
-    'feedback'=>'site/feedback',
-    'guarantee'=>'site/guarantee',
-    'about'=>'site/about',
-    ''=>'site/index',
+    'uploading' => 'adminProduct/uploading',
+    'feedback' => 'site/feedback',
+    'guarantee' => 'site/guarantee',
+    'about' => 'site/about',
+    '' => 'site/index',
 );
 
 ?>

@@ -2,13 +2,13 @@
 Error: Undefined variable: "$AQUA_COLOR".
         on line 13 of sass/admin/index.scss
 
-8:     li{
+8:     li {
 9:       margin: 10px;
 10:     }
-11:     a{
+11:     a {
 12:       text-decoration: none;
 13:       color: $AQUA_COLOR;
-14:       &:hover{
+14:       &:hover {
 15:         color: $DARK_GREY_COLOR;
 16:       }
 17:     }
@@ -89,4 +89,4 @@ sass/admin/index.scss:13
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$AQUA_COLOR\".\A         on line 13 of sass/admin/index.scss\A \A 8:     li{\A 9:       margin: 10px;\A 10:     }\A 11:     a{\A 12:       text-decoration: none;\A 13:       color: $AQUA_COLOR;\A 14:       &:hover{\A 15:         color: $DARK_GREY_COLOR;\A 16:       }\A 17:     }\A 18:   }"; }
+  content: "Error: Undefined variable: \"$AQUA_COLOR\".\A         on line 13 of sass/admin/index.scss\A \A 8:     li {\A 9:       margin: 10px;\A 10:     }\A 11:     a {\A 12:       text-decoration: none;\A 13:       color: $AQUA_COLOR;\A 14:       &:hover {\A 15:         color: $DARK_GREY_COLOR;\A 16:       }\A 17:     }\A 18:   }"; }

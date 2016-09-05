@@ -661,6 +661,20 @@ ul.pagination {
   color: #00a2e8; }
   .admin ul.admin-menu a:hover, .admin-create ul.admin-menu a:hover, .admin-update ul.admin-menu a:hover, .admin-view ul.admin-menu a:hover, .admin-afisha ul.admin-menu a:hover {
     color: #303030; }
+.admin .btn-more, .admin-create .btn-more, .admin-update .btn-more, .admin-view .btn-more, .admin-afisha .btn-more {
+  display: flex;
+  justify-content: center; }
+  .admin .btn-more #btn-more, .admin-create .btn-more #btn-more, .admin-update .btn-more #btn-more, .admin-view .btn-more #btn-more, .admin-afisha .btn-more #btn-more {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    padding: 10px;
+    color: #FFFFFF;
+    background: #00a2e8;
+    font-size: 18px;
+    width: 200px; }
+    .admin .btn-more #btn-more:hover, .admin-create .btn-more #btn-more:hover, .admin-update .btn-more #btn-more:hover, .admin-view .btn-more #btn-more:hover, .admin-afisha .btn-more #btn-more:hover {
+      background: #303030; }
 .admin a.btn-add-product, .admin a.btn-add-category, .admin-create a.btn-add-product, .admin-create a.btn-add-category, .admin-update a.btn-add-product, .admin-update a.btn-add-category, .admin-view a.btn-add-product, .admin-view a.btn-add-category, .admin-afisha a.btn-add-product, .admin-afisha a.btn-add-category {
   text-decoration: none;
   color: white;

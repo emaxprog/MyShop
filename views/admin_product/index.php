@@ -6,7 +6,7 @@
                 <h2>Управление товарами</h2>
                 <a href="/admin/product/create" class="btn-add-product"><i class="fa fa-plus"></i> Добавить товар</a>
                 <h4>Список товаров</h4>
-                <table class="table-products">
+                <table class="table-products" id="table-products-ajax">
                     <tr>
                         <th>ID товара</th>
                         <th>Артикул</th>
@@ -26,6 +26,9 @@
                         </tr>
                     <?php endforeach; ?>
                 </table>
+                <div class="btn-more">
+                    <button id="btn-more"><i class="fa fa-arrow-down fa-lg"></i> Дальше <i class="fa fa-arrow-down fa-lg"></i></button>
+                </div>
             </div>
         </div>
     </div>

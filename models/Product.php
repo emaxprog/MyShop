@@ -135,7 +135,15 @@ ORDER BY product_id ASC LIMIT :limit OFFSET :offset";
     public static function getProductsAll()
     {
         $db = DB::getConnection();
-        $result = $db->query('SELECT product_id, name, price, code FROM products ORDER BY product_id ASC');
+        $result = $db->query('SELECT product_id, name, price, code FROM products ORDER BY product_id ASC LIMIT 0,5');
+        $products = self::getAssocArray($result);
+        return $products;
+    }
+
+    public static function getProductsAjax($startFrom)
+    {
+        $db = DB::getConnection();
+        $result = $db->query("SELECT product_id, name, price, code FROM products ORDER BY product_id ASC LIMIT {$startFrom},5");
         $products = self::getAssocArray($result);
         return $products;
     }

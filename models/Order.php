@@ -130,7 +130,7 @@ ON (orders.customer_id=customers.customer_id) WHERE order_id=:id";
     public static function deleteOrder($id)
     {
         $db = DB::getConnection();
-        $sql = "DELETE FROM orders WHERE id=:id";
+        $sql = "DELETE FROM orders WHERE order_id=:id";
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, PDO::PARAM_INT);
         return $result->execute();
